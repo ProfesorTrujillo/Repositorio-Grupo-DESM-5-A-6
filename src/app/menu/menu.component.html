@@ -1,0 +1,9 @@
+<section class="menu">
+
+  <div class="card" *ngFor="let platillo of menu">
+    <img [src]="platillo.imagen" alt="Platillo">
+    <h3>{{ platillo.nombre }}</h3>
+    <p>${{ platillo.precio }}</p>
+  </div>
+
+</section>
