@@ -1,0 +1,9 @@
+<section>
+  <h2>Menú</h2>
+
+  <ul>
+    <li *ngFor="let platillo of platillos">
+      {{ platillo.nombre }} - ${{ platillo.precio }}
+    </li>
+  </ul>
+</section>
