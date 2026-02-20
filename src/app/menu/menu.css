@@ -1,0 +1,29 @@
+.menu {
+  background: white;
+  margin: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* título */
+.menu h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* lista */
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* efecto suave */
+.menu li:hover {
+  background-color: #f5f5f5;
+}
