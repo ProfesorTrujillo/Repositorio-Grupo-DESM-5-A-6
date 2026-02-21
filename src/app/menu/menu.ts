@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MenuService, Platillo } from './menu.service';
 
 @Component({
   selector: 'app-menu',
@@ -8,15 +9,22 @@ import { CommonModule } from '@angular/common';
   templateUrl: './menu.html',
   styleUrls: ['./menu.css']
 })
-export class Menu {
+export class Menu implements OnInit {
 
-  platillos = [
-    { nombre: 'Tacos al Pastor', precio: 40 },
-    { nombre: 'Enchiladas Verdes', precio: 55 },
-    { nombre: 'Hamburguesa Especial', precio: 100 },
-    { nombre: 'Pizza Pepperoni', precio: 99 },
-    { nombre: 'quesadilla de Pollo', precio: 30 },
-    { nombre: 'Refresco', precio: 30 }
-  ];
+  categorias: string[] = [];
+  categoriaActiva: string = '';
+  platillosFiltrados: Platillo[] = [];
 
+  constructor(private menuService: MenuService) {}
+
+  ngOnInit(): void {
+    this.categorias = this.menuService.getCategorias();
+    this.categoriaActiva = this.categorias[0];
+    this.filtrar(this.categoriaActiva);
+  }
+
+  filtrar(categoria: string): void {
+    this.categoriaActiva = categoria;
+    this.platillosFiltrados = this.menuService.getPorCategoria(categoria);
+  }
 }

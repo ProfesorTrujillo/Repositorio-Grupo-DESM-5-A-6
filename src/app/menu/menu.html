@@ -1,9 +1,37 @@
-<section>
-  <h2>Menú</h2>
+<section class="menu-section" id="menu">
+  <div class="menu-header">
+    <p class="menu-eyebrow">◆ Nuestra Selección ◆</p>
+    <h2 class="menu-title">Carta del Día</h2>
+    <p class="menu-intro">Ingredientes de temporada, sabores de toda la vida</p>
+  </div>
 
-  <ul>
-    <li *ngFor="let platillo of platillos">
-      {{ platillo.nombre }} - ${{ platillo.precio }}
-    </li>
-  </ul>
+  <div class="categoria-tabs">
+    <button
+      *ngFor="let cat of categorias"
+      class="tab-btn"
+      [class.active]="cat === categoriaActiva"
+      (click)="filtrar(cat)">
+      {{ cat }}
+    </button>
+  </div>
+
+  <div class="platillos-grid">
+    <div
+      class="platillo-card"
+      *ngFor="let platillo of platillosFiltrados"
+      [class.destacado]="platillo.destacado">
+
+      <div class="card-badge" *ngIf="platillo.destacado">Chef recomienda</div>
+
+      <div class="card-body">
+        <div class="card-top">
+          <h3 class="platillo-nombre">{{ platillo.nombre }}</h3>
+          <span class="platillo-precio">${{ platillo.precio }}</span>
+        </div>
+        <p class="platillo-descripcion">{{ platillo.descripcion }}</p>
+      </div>
+
+      <div class="card-deco"></div>
+    </div>
+  </div>
 </section>
