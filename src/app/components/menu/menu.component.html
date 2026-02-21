@@ -1,0 +1,10 @@
+<section class="menu-container">
+  <h2>Nuestro Menú Especial</h2>
+  <div class="grid">
+    <div class="card" *ngFor="let item of listaPlatillos">
+      <h3>{{ item.nombre }}</h3>
+      <p>{{ item.desc }}</p>
+      <span class="price">${{ item.precio }}</span>
+    </div>
+  </div>
+</section>

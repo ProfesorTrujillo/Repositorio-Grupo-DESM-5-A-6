@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background-color: #1a1a1a;
+  color: #d4af37;
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 3px solid #d4af37;
+}
+
+.menu-container { padding: 40px 20px; max-width: 1000px; margin: auto; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  border-left: 5px solid #d4af37;
+}
+.card:hover { transform: translateY(-5px); }
+.price { color: #d4af37; font-weight: bold; font-size: 1.2rem; }
+
+footer {
+  background: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
