@@ -1,16 +1,12 @@
 footer {
-  background-color: #222;
-  color: #eee;
+  background: #1e88e5;
+  color: white;
   text-align: center;
   padding: 25px 15px;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 footer p {
-  margin: 5px 0;
+  margin: 6px 0;
   font-size: 0.95rem;
-}
-
-footer strong {
-  color: #ff4d4d;
 }
