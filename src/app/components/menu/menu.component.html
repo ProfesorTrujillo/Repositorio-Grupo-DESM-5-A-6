@@ -1,0 +1,78 @@
+<section class="menu-section">
+  <h2 class="menu-titulo">🍽️ Nuestro Menú</h2>
+  <p class="menu-subtitulo">Descubre nuestros platillos preparados con los mejores ingredientes</p>
+
+  <div class="menu-grid">
+    <div class="menu-card" *ngFor="let item of menu">
+      <div class="card-imagen-wrapper">
+        <img [src]="item.imagen" [alt]="item.nombre" class="card-imagen" />
+        <span class="card-categoria">{{ item.categoria }}</span>
+      </div>
+
+      <div class="card-body">
+        <h3 class="card-nombre">{{ item.nombre }}</h3>
+        <p class="card-descripcion">{{ item.descripcion }}</p>
+
+        <div class="card-footer">
+          <span class="card-precio">${{ item.precio }}</span>
+
+          <div class="card-controles" *ngIf="cantidadEnCarrito(item) > 0; else btnAgregar">
+            <button class="btn-control" (click)="quitarDelCarrito({...item, cantidad: cantidadEnCarrito(item)})">−</button>
+            <span class="card-cantidad">{{ cantidadEnCarrito(item) }}</span>
+            <button class="btn-control" (click)="agregarAlCarrito(item)">+</button>
+          </div>
+
+          <ng-template #btnAgregar>
+            <button class="btn-agregar-card" (click)="agregarAlCarrito(item)">+ Agregar</button>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón flotante -->
+  <button class="btn-flotante" (click)="abrirCarrito()" *ngIf="totalItems > 0">
+    🛒 Carrito <span class="badge">{{ totalItems }}</span>
+  </button>
+
+</section>
+
+<!-- Panel del carrito -->
+<div class="overlay" *ngIf="carritoAbierto" (click)="cerrarCarrito()"></div>
+
+<div class="carrito-panel" [class.abierto]="carritoAbierto">
+  <div class="carrito-header">
+    <h3>🛒 Tu Pedido</h3>
+    <button class="btn-cerrar" (click)="cerrarCarrito()">✕</button>
+  </div>
+
+  <div class="carrito-vacio" *ngIf="carrito.length === 0">
+    <p>Tu carrito está vacío</p>
+  </div>
+
+  <div class="carrito-items" *ngIf="carrito.length > 0">
+    <div class="carrito-item" *ngFor="let item of carrito">
+      <img [src]="item.imagen" [alt]="item.nombre" class="carrito-img" />
+      <div class="carrito-info">
+        <p class="carrito-nombre">{{ item.nombre }}</p>
+        <p class="carrito-precio">${{ item.precio * item.cantidad }}</p>
+      </div>
+      <div class="carrito-cantidad">
+        <button class="btn-control" (click)="quitarDelCarrito(item)">−</button>
+        <span>{{ item.cantidad }}</span>
+        <button class="btn-control" (click)="agregarAlCarrito(item)">+</button>
+      </div>
+      <button class="btn-eliminar" (click)="eliminarDelCarrito(item)">🗑️</button>
+    </div>
+  </div>
+
+  <div class="carrito-footer" *ngIf="carrito.length > 0">
+    <div class="carrito-total">
+      <span>Total</span>
+      <span class="total-precio">${{ totalPrecio }}</span>
+    </div>
+    <button class="btn-confirmar" (click)="confirmarPedido()">
+      Confirmar Pedido
+    </button>
+  </div>
+</div>
