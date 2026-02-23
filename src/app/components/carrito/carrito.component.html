@@ -1,0 +1,70 @@
+<section class="carrito">
+  <div class="carrito-header">
+    <p class="carrito-eyebrow">◆ Tu Selección ◆</p>
+    <h2 class="carrito-title">Carrito de Pedido</h2>
+  </div>
+
+  <!-- Carrito vacío -->
+  <div class="empty-state" *ngIf="carrito.items().length === 0">
+    <p class="empty-icon">🛒</p>
+    <p class="empty-msg">Aún no has agregado platillos.</p>
+    <a routerLink="/" class="btn-secundario">Ver el menú</a>
+  </div>
+
+  <!-- Tabla del carrito -->
+  <div class="tabla-wrapper" *ngIf="carrito.items().length > 0">
+    <table class="tabla">
+      <thead>
+        <tr>
+          <th>Platillo</th>
+          <th class="col-precio">Precio unit.</th>
+          <th class="col-cantidad">Cantidad</th>
+          <th class="col-importe">Importe</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let it of carrito.items(); trackBy: trackById">
+          <td class="td-nombre">{{ it.platillo.nombre }}</td>
+          <td class="col-precio">{{ it.platillo.precio | currency:'MXN':'symbol':'1.0-0' }}</td>
+          <td class="col-cantidad">
+            <input
+              type="number"
+              min="0"
+              class="input-cantidad"
+              [value]="it.cantidad"
+              (change)="actualizarCantidad(it.id, $any($event.target).value)"
+            />
+          </td>
+          <td class="col-importe">
+            {{ (it.platillo.precio * it.cantidad) | currency:'MXN':'symbol':'1.0-0' }}
+          </td>
+          <td>
+            <button class="btn-eliminar" (click)="carrito.eliminar(it.id)" title="Eliminar">✕</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Totales -->
+    <div class="totales">
+      <div class="totales-row">
+        <span>Subtotal</span>
+        <strong>{{ carrito.subtotal() | currency:'MXN':'symbol':'1.2-2' }}</strong>
+      </div>
+      <div class="totales-row iva-row">
+        <span>IVA (16%)</span>
+        <strong>{{ carrito.iva() | currency:'MXN':'symbol':'1.2-2' }}</strong>
+      </div>
+      <div class="totales-row total-row">
+        <span>Total a pagar</span>
+        <strong>{{ carrito.total() | currency:'MXN':'symbol':'1.2-2' }}</strong>
+      </div>
+
+      <div class="acciones">
+        <button class="btn-vaciar" (click)="carrito.vaciar()">Vaciar carrito</button>
+        <a routerLink="/" class="btn-secundario">← Seguir comprando</a>
+      </div>
+    </div>
+  </div>
+</section>

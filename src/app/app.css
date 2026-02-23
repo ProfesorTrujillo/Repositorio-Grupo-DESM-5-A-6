@@ -1,0 +1,26 @@
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 10px 20px;
+  background-color: #111;
+  border-bottom: 1px solid rgba(184, 134, 11, 0.25);
+}
+
+.main-nav a {
+  color: #c8a96e;
+  text-decoration: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border: 1px solid transparent;
+  transition: all 0.25s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active-link {
+  color: #f5e6c8;
+  border-color: rgba(184, 134, 11, 0.5);
+}

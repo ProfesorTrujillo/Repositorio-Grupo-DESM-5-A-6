@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { Header } from './header/header';
-import { Menu } from './menu/menu';
 import { Footer } from './footer/footer';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Header, Menu, Footer],
+  imports: [RouterLink, RouterOutlet, Header, Footer],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
-export class App {
-}
+export class App {}

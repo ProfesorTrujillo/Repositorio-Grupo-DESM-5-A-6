@@ -1,0 +1,60 @@
+<main class="menu">
+  <div class="menu-header">
+    <p class="menu-eyebrow">◆ Nuestra Selección ◆</p>
+    <h2 class="menu-title">Carta del Día</h2>
+    <p class="menu-intro">Ingredientes de temporada, sabores de toda la vida</p>
+  </div>
+
+  <!-- Enlace rápido al carrito con badge -->
+  <div class="carrito-acceso">
+    <a routerLink="/carrito" class="carrito-btn">
+      Ver carrito
+      <span class="badge" *ngIf="totalItems > 0">{{ totalItems }}</span>
+    </a>
+  </div>
+
+  <!-- Tabs de categorías -->
+  <div class="categoria-tabs">
+    <button
+      *ngFor="let cat of categorias"
+      class="tab-btn"
+      [class.active]="cat === categoriaActiva"
+      (click)="filtrar(cat)">
+      {{ cat }}
+    </button>
+  </div>
+
+  <!-- Grid de platillos -->
+  <p *ngIf="platillosFiltrados.length === 0">Por el momento no hay platillos en esta categoría.</p>
+
+  <div class="platillos-grid">
+    <article
+      class="platillo-card"
+      *ngFor="let p of platillosFiltrados; trackBy: trackById"
+      [class.destacado]="p.destacado"
+      [class.agotado]="!p.disponible">
+
+      <div class="card-badge" *ngIf="p.destacado">Chef recomienda</div>
+
+      <div class="card-body">
+        <div class="card-top">
+          <h3 class="platillo-nombre">{{ p.nombre }}</h3>
+          <span class="platillo-precio">{{ p.precio | currency:'MXN':'symbol':'1.0-0' }}</span>
+        </div>
+        <p class="platillo-descripcion">{{ p.descripcion }}</p>
+      </div>
+
+      <footer class="card-footer">
+        <span class="disponibilidad-badge" [class.no-disponible]="!p.disponible">
+          {{ p.disponible ? 'Disponible' : 'Agotado' }}
+        </span>
+        <button
+          class="btn-agregar"
+          (click)="agregar(p)"
+          [disabled]="!p.disponible">
+          {{ p.disponible ? '+ Agregar' : 'Agotado' }}
+        </button>
+      </footer>
+    </article>
+  </div>
+</main>
