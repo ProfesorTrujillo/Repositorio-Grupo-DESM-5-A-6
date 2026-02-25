@@ -1,9 +1,25 @@
 <div class="menu-container">
   <h2>Nuestros Platillos</h2>
-
+  <p *ngIf="platillos.length === 0">Por el momento no hay platillos disponibles.</p>
   <div class="menu-grid">
     <div class="menu-card" *ngFor="let platillo of platillos">
-      <h3>{{ platillo }}</h3>
+
+      <div class="card-header">
+        <h3>{{ platillo.nombre }}</h3>
+        <p class="price">
+          ${{ platillo.precio| currency:'MXN':'symbol':'1.0-0' }}
+        </p>
+      </div>
+
+      <div class="card-body">
+        <span class="badge" [class.no-disponible]="!platillo.disponible">
+          {{ platillo.disponible ? 'Disponible' : 'Agotado' }}
+        </span>
+      </div>
+
+      <button class="add-button" (click)="agregarAlCarrito(platillo)">
+        Agregar al 🛒
+      </button>
     </div>
   </div>
 </div>

@@ -1,19 +1,26 @@
-import { Component, OnInit } from '@angular/core';
-import { NgFor } from '@angular/common';
-import { MenuService } from "../menu-service";
+import { Component, inject } from '@angular/core';
+import { CommonModule, CurrencyPipe } from '@angular/common';
+import { MenuService } from "../services/menu-service";
+import { CarritoService } from '../services/carrito-service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-menu-component',
-  imports: [NgFor],
+  imports: [CommonModule, CurrencyPipe, RouterLink],
   templateUrl: './menu-component.html',
   styleUrl: './menu-component.css',
 })
-export class MenuComponent implements OnInit {
-  platillos: string[] = [];
 
-  constructor(private menuService: MenuService) {}
+export class MenuComponent {
+  private readonly menuService = inject(MenuService);
+  private readonly carritoService = inject(CarritoService);
 
-  ngOnInit(): void {
-    this.platillos = this.menuService.getPlatillos();
+  platillos: { id: number, nombre: string, precio: number, disponible: boolean }[] = this.menuService.getPlatillos();
+
+  trackById = (index: number, item: { id: number, nombre: string, precio: number, disponible: boolean }) => item.id;
+
+  agregarAlCarrito(platillo: { id: number, nombre: string, precio: number, disponible: boolean }) {
+    console.log('Agregado al carrito:', platillo);
+    this.carritoService.agregar(platillo, 1);
   }
 }

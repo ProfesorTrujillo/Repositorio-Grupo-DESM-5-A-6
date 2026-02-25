@@ -1,0 +1,23 @@
+.top-actions {
+  margin: 20px auto 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.action-btn {
+  background: transparent;
+  color: #1565c0;
+  border: 1.5px solid #1565c0;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.action-btn:hover {
+  background: #1565c0;
+  color: white;
+}

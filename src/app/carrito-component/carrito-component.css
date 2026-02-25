@@ -1,0 +1,20 @@
+.carrito {
+    padding: 16px;
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla th,
+.tabla td {
+    border-bottom: 1px solid #eee;
+    padding: 8px;
+    text-align: left;
+}
+
+.totales {
+    margin-top: 16px;
+    text-align: right;
+}
