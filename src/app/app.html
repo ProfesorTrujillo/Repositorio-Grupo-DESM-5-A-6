@@ -1,18 +1,29 @@
-<app-header-component></app-header-component>
-<div class="top-actions">
-  <button 
-    *ngIf="router.url !== '/carrito'" 
-    routerLink="/carrito"
-    class="action-btn">
-    🛒 Ver carrito
-  </button>
+<div class="layout">
 
-  <button 
-    *ngIf="router.url === '/carrito'" 
-    routerLink="/"
-    class="action-btn secondary">
-    Volver a menú
-  </button>
+  <app-header-component></app-header-component>
+
+  <main class="main-content">
+
+    <div class="top-actions">
+      <button 
+        *ngIf="router.url !== '/carrito'" 
+        routerLink="/carrito"
+        class="action-btn">
+        🛒 Ver carrito
+      </button>
+
+      <button 
+        *ngIf="router.url === '/carrito'" 
+        routerLink="/"
+        class="action-btn secondary">
+        Volver a menú
+      </button>
+    </div>
+
+    <router-outlet></router-outlet>
+
+  </main>
+
+  <app-footer-component></app-footer-component>
+
 </div>
-<router-outlet></router-outlet>
-<app-footer-component></app-footer-component>

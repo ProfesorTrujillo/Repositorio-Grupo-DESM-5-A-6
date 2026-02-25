@@ -1,20 +1,99 @@
+/* Contenedor principal */
 .carrito {
-    padding: 16px;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
 }
 
+/* Título */
+.carrito h2 {
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+/* Tabla */
 .tabla {
     width: 100%;
     border-collapse: collapse;
+    font-size: 0.95rem;
 }
 
-.tabla th,
+.tabla thead {
+    background: #f8f9fa;
+}
+
+.tabla th {
+    padding: 12px 10px;
+    font-weight: 600;
+    color: #444;
+    border-bottom: 2px solid #eee;
+}
+
 .tabla td {
-    border-bottom: 1px solid #eee;
-    padding: 8px;
-    text-align: left;
+    padding: 12px 10px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: middle;
 }
 
+/* Hover en filas */
+.tabla tbody tr:hover {
+    background-color: #fafafa;
+}
+
+/* Input cantidad */
+.tabla input[type="number"] {
+    width: 60px;
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Botones */
+button {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+}
+
+/* Botón eliminar */
+button:hover {
+    opacity: 0.9;
+}
+
+.tabla button {
+    background-color: #ff4d4f;
+    color: white;
+}
+
+/* Totales */
 .totales {
-    margin-top: 16px;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 2px solid #f0f0f0;
     text-align: right;
+}
+
+.totales p {
+    margin: 6px 0;
+    font-size: 1rem;
+}
+
+.totales p:last-child {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Botón vaciar */
+.totales button {
+    background-color: #333;
+    color: white;
+    margin-top: 12px;
 }

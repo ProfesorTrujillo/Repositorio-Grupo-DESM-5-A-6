@@ -1,8 +1,10 @@
 .top-actions {
   margin: 20px auto 0 auto;
-  padding: 0 20px;
+  max-width: 1300px;
+  padding: 0 24px;
   display: flex;
   justify-content: flex-end;
+  width: 100%;
 }
 
 .action-btn {

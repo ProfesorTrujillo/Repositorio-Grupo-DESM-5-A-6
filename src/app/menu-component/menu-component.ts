@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { MenuService } from "../services/menu-service";
 import { CarritoService } from '../services/carrito-service';
@@ -15,6 +15,8 @@ export class MenuComponent {
   private readonly menuService = inject(MenuService);
   private readonly carritoService = inject(CarritoService);
 
+  toastMessage = signal<string | null>(null);
+
   platillos: { id: number, nombre: string, precio: number, disponible: boolean }[] = this.menuService.getPlatillos();
 
   trackById = (index: number, item: { id: number, nombre: string, precio: number, disponible: boolean }) => item.id;
@@ -22,5 +24,9 @@ export class MenuComponent {
   agregarAlCarrito(platillo: { id: number, nombre: string, precio: number, disponible: boolean }) {
     console.log('Agregado al carrito:', platillo);
     this.carritoService.agregar(platillo, 1);
+    this.toastMessage.set(`✔ ${platillo.nombre} agregado correctamente`);
+    setTimeout(() => {
+      this.toastMessage.set(null);
+    }, 2500);
   }
 }
