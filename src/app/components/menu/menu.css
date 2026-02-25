@@ -1,0 +1,131 @@
+:root {
+  --card: #111827;
+  --shadow-1: 0 10px 30px rgba(0, 0, 0, .25);
+  --text: #e5e7eb;
+}
+
+.menu {
+  text-align: center;
+  margin: 20px auto;
+  margin-top: 0%;
+  max-width: 600px;
+}
+
+.precio {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.btn-small {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 10px;
+}
+/* =========================
+ Cards (grid responsivo)
+ ========================= */
+.cards {
+    max-width: 1100px;
+    margin: 18px  0;
+    padding: 8px 24px 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--card);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, .08);
+    box-shadow: var(--shadow-1);
+    padding: 18px;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    transition: transform .18s ease, box-shadow .25s ease, border-color .2s ease;
+}
+
+.card::after {
+    /* brillo diagonal sutil */
+    content: "";
+    position: absolute;
+    inset: -40%;
+    background: conic-gradient(from 200deg, transparent, rgba(34, 211, 238, .08), transparent);
+    transform: rotate(8deg);
+    z-index: -1;
+    transition: opacity .25s ease;
+    opacity: .3;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(34, 211, 238, .35);
+    box-shadow: 0 14px 42px rgba(2, 132, 199, .25);
+}
+
+.card:hover::after {
+    opacity: .55;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.card h4 {
+    margin: 0;
+}
+
+.tag {
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: rgba(52, 211, 153, .18);
+    border: 1px solid rgba(52, 211, 153, .35);
+}
+
+.tag-blue {
+    background: rgba(96, 165, 250, .18);
+    border-color: rgba(96, 165, 250, .35);
+}
+
+.tag-purple {
+    background: rgba(167, 139, 250, .18);
+    border-color: rgba(167, 139, 250, .35);
+}
+
+.card p {
+    margin: 0 0 12px;
+    color: var(--text);
+    opacity: .9;
+}
+
+
+/* Contenedor de la alerta flotante */
+.alert-success-toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #28a745; /* Verde Bootstrap */
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 999999;
+  animation: slideIn 0.5s ease-out;
+  font-weight: bold;
+}
+
+/* Animación de entrada */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

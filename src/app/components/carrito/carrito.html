@@ -1,0 +1,76 @@
+<section class="container mt-4">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="mb-4">🛒 Tu Carrito de Compras</h2>
+      
+      <div *ngIf="carrito.items().length === 0" class="alert alert-info">
+        <p class="mb-0">Aún no has agregado platillos. <a routerLink="/" class="alert-link">¡Ver el menú!</a></p>
+      </div>
+
+      <div *ngIf="carrito.items().length > 0" class="card shadow-sm">
+        <div class="card-body p-0">
+          <table class="table table-hover mb-0">
+            <thead class="bg-light">
+              <tr>
+                <th>Platillo</th>
+                <th class="text-center">Precio</th>
+                <th class="text-center">Cantidad</th>
+                <th class="text-right">Importe</th>
+                <th class="text-center">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let it of carrito.items(); trackBy: trackById">
+                <td class="align-middle">
+                  <strong>{{ it.platillo.nombre }}</strong>
+                </td>
+                <td class="text-center align-middle">
+                  {{ it.platillo.precio | currency: 'MXN':'symbol' }} 
+                </td>
+                <td class="text-center align-middle" style="width: 150px;">
+                  <input type="number" 
+                         min="0" 
+                         class="form-control form-control-sm mx-auto text-center" 
+                         [value]="it.cantidad"
+                         (input)[cite_start]="actualizarCantidad(it.id, $any($event.target).value)"> 
+                </td>
+                <td class="text-right align-middle font-weight-bold">
+                  {{ (it.platillo.precio * it.cantidad) | currency: 'MXN':'symbol' }} 
+                </td>
+                <td class="text-center align-middle">
+                  <button class="btn btn-outline-danger btn-sm" (click)="carrito.eliminar(it.id)">
+                    Eliminar 
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 offset-md-8 mt-4" *ngIf="carrito.items().length > 0">
+      <div class="card bg-light shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Resumen de Cuenta</h5>
+          <hr>
+          <div class="d-flex justify-content-between mb-2">
+            <span>Subtotal:</span>
+            <span>{{ carrito.subtotal() | currency: 'MXN':'symbol' }}</span> 
+          </div>
+          <div class="d-flex justify-content-between mb-2">
+            <span>IVA (16%):</span>
+            <span>{{ carrito.iva() | currency: 'MXN':'symbol' }}</span>
+          </div>
+          <div class="d-flex justify-content-between mb-3">
+            <span class="h5">Total:</span>
+            <span class="h5 text-primary">{{ carrito.total() | currency: 'MXN':'symbol' }}</span> 
+          </div>
+          <div class="d-grid gap-2">
+            <button class="btn btn-danger btn-block mb-2" (click)="carrito.vaciar()">Vaciar Carrito</button>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
