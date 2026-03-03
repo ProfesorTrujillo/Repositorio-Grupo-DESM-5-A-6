@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
@@ -7,6 +8,16 @@ html, body {
 app-root {
   display: block;
   height: 100%;
+}
+
+/* FIX Leaflet cuando hay reglas globales para img/video */
+.leaflet-container .leaflet-marker-icon,
+.leaflet-container .leaflet-marker-shadow,
+.leaflet-container .leaflet-tile,
+.leaflet-container img.leaflet-image-layer,
+.leaflet-container .leaflet-pane>img {
+  max-width: none !important;
+  max-height: none !important;
 }
 
 /* Este será el contenedor real */
@@ -34,7 +45,7 @@ app-root {
   padding: 14px 22px;
   border-radius: 12px;
 
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 
   font-size: 0.9rem;
   font-weight: 500;
@@ -47,6 +58,7 @@ app-root {
     opacity: 0;
     transform: translateY(15px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

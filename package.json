@@ -6,8 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:restaurant-app": "node dist/restaurant-app/server/server.mjs"
+    "test": "ng test"
   },
   "prettier": {
     "printWidth": 100,
@@ -31,8 +30,9 @@
     "@angular/platform-browser": "^21.1.0",
     "@angular/platform-server": "^21.1.0",
     "@angular/router": "^21.1.0",
-    "@angular/ssr": "^21.1.1",
+    "@types/leaflet": "^1.9.21",
     "express": "^5.1.0",
+    "leaflet": "^1.9.4",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },

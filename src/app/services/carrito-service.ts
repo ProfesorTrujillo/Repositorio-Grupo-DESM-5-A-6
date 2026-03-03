@@ -23,7 +23,8 @@ export class CarritoService {
       total + item.platillo.precio * item.cantidad, 0)
   );
   readonly iva = computed(() => this.subtotal() * 0.16);
-  readonly total = computed(() => this.subtotal() + this.iva());
+  readonly envio = signal<number>(0);
+  readonly total = computed(() => this.subtotal() + this.iva() + this.envio());
 
   constructor() {
 
@@ -70,5 +71,9 @@ export class CarritoService {
 
   vaciar(): void {
     this._items.set([]);
+  }
+
+  setEnvio(monto: number): void {
+    this.envio.set(Math.max(0, Math.round(monto)));
   }
 }
