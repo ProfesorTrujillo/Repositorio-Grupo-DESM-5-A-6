@@ -5,7 +5,7 @@ import { Car, ItemCarrito } from '../../services/car';
 @Component({
   selector: 'app-carrito',
   standalone: true,
-  imports: [CommonModule, CurrencyPipe],
+  imports: [CommonModule, CurrencyPipe ],
   templateUrl: './carrito.html',
   styleUrl: './carrito.css',
 })

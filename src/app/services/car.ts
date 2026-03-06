@@ -14,13 +14,27 @@ export class Car {
   // Estado interno (writable) y lectura pública (readonly)
   private readonly _items = signal<ItemCarrito[]>([]);
   readonly items = this._items.asReadonly();
+
   // Derivados (lectura): subtotal, impuestos y total
   readonly subtotal = computed(
     () => this._items().reduce((acc, it) => acc + it.platillo.precio * it.cantidad, 0)
   );
+
+  // En car.service.ts agregar:
+  readonly distancia = signal<number>(0); // en kilómetros
+
+  // El costo de envío: $5 por km (ejemplo)
+  readonly costoEnvio = computed(() => {
+    const d = this.distancia();
+    return d > 0 ? d * 5 : 0;
+  });
+
+  // Actualizar el total final para incluir el envío
+  
   // IVA configurable; aquí usamos 16% como ejemplo
   readonly iva = computed(() => this.subtotal() * 0.16);
-  readonly total = computed(() => this.subtotal() + this.iva());
+  
+  readonly total = computed(() => this.subtotal() + this.iva() + this.costoEnvio());
   constructor() {
     // Persistencia simple en localStorage (opcional)
     const raw = localStorage.getItem('carrito');
@@ -56,5 +70,11 @@ export class Car {
   // Vaciar carrito
   vaciar(): void {
     this._items.set([]);
+  }
+  // Establecer el costo de envío basado en la distancia
+  setEnvio(costoPesos: number): void {
+    // Convertir el costo a distancia: si costo = distancia * 5, entonces distancia = costo / 5
+    const distancia = costoPesos / 5;
+    this.distancia.set(distancia);
   }
 }

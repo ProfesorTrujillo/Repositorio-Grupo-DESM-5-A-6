@@ -12,3 +12,13 @@ h1, h2 {
 section, footer {
   padding: 10px 20px;
 }
+
+/* FIX Leaflet cuando hay reglas globales para img/video */
+.leaflet-container .leaflet-marker-icon,
+.leaflet-container .leaflet-marker-shadow,
+.leaflet-container .leaflet-tile,
+.leaflet-container img.leaflet-image-layer,
+.leaflet-container .leaflet-pane > img {
+ max-width: none !important;
+ max-height: none !important;
+}
