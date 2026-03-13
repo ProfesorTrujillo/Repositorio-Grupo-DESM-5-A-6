@@ -1,0 +1,41 @@
+<div *ngIf="selectedPackage; else noSelection">
+  <h2>Esto es el detalle de tu viaje al amor</h2>
+  <h3>{{ selectedPackage!.destination }}</h3>
+  <p>{{ selectedPackage!.description }}</p>
+  <h4>Precio Total: ${{ selectedPackage!.price * reservationData.travelers }} </h4>
+
+  <hr>
+
+  <h3>Reserva tu paquete</h3>
+  <form #reservaForm="ngForm" (ngSubmit)="onSubmit(reservaForm)">
+    
+    <div style="margin-bottom: 10px;">
+      <label>Nombre Completo:</label><br>
+      <input type="text" name="name" [(ngModel)]="reservationData.name" required #name="ngModel">
+    </div>
+
+    <div style="margin-bottom: 10px;">
+      <label>Correo:</label><br>
+      <input type="email" name="email" [(ngModel)]="reservationData.email" required email #email="ngModel">
+    </div>
+
+    <div style="margin-bottom: 10px;">
+      <label>Cuantas personas son?</label><br>
+      <input type="number" name="travelers" [(ngModel)]="reservationData.travelers" required min="1">
+    </div>
+
+    <button type="submit" [disabled]="reservaForm.invalid" style="background-color: #28a745; color: white; padding: 10px; border: none; cursor: pointer;">
+      Confirmar Reserva
+    </button>
+  </form>
+
+  <div *ngIf="reservationSuccess" style="margin-top: 15px; padding: 10px; background-color: #d4edda; color: #155724; border-radius: 5px; transition: opacity 0.5s;">
+    Esta todo listo!{{ reservationData.name }}!
+  </div>
+</div>
+
+<ng-template #noSelection>
+  <div style="color: rgb(19, 16, 16); padding: 20px;">
+    <p>Selecciona un paquete de la lista para ver los detalles y reservar.</p>
+  </div>
+</ng-template>

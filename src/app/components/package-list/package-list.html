@@ -1,0 +1,9 @@
+<div class="paquetes-container">
+  <h2>Estos son los paquetes</h2>
+  <div *ngFor="let pkg of packages" 
+       (click)="selectPackage(pkg)" 
+       style="border: 1px solid #840c9c; padding: 10px; margin-bottom: 10px; cursor: pointer; border-radius: 5px;">
+    <h3>{{ pkg.destination }}</h3>
+    <p>Y por solo: {{ pkg.price }} MXN</p>
+  </div>
+</div>
