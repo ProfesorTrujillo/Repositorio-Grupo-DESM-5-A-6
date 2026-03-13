@@ -1,0 +1,14 @@
+.navbar-container{
+    padding: 10px 20px;
+}
+
+.custom-navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8744fc;
+    padding: 10px 30px;
+    border-radius: 15px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}

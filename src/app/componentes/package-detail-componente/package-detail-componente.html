@@ -1,0 +1,65 @@
+<div *ngIf="viaje; else noViaje" class="detalle-container">
+  <a [routerLink]="['/']" class="btn-volver">
+    <span class="flecha">←</span> Volver 
+  </a>
+
+  <div class="detalle-grid">
+    
+    <section class="columna-info">
+      <h2>Detalles viaje {{ viaje.nombre }}</h2>
+      <img [src]="viaje.imagen" [alt]="viaje.nombre" class="detalle-imagen">
+      
+      <div class="info-texto">
+        <p><strong>Descripción:</strong> {{ viaje.descripcion }}</p>
+        <p><strong>Categoría:</strong> {{ viaje.categoria }}</p>
+        <p><strong>Precio base:</strong> ${{ viaje.precio?.toFixed(2) }}</p>
+        <p><strong>Estado:</strong> 
+          <span [ngClass]="viaje.estado ? 'disponible' : 'agotado'">
+            {{ viaje.estado ? 'Disponible' : 'Agotado' }}
+          </span>
+        </p>
+      </div>
+    </section>
+
+    <div class="columna-formulario">
+      
+      <div *ngIf="!mostrarFormulario && !mensajeReserva" class="card-acciones-detalle">
+        <button class="btn-reservar" (click)="activarFormulario()" [disabled]="!viaje.estado">
+          {{ viaje.estado ? 'Reservar' : 'Agotado' }}
+        </button>
+      </div>
+
+      <div *ngIf="mostrarFormulario" class="tarjeta-form" style="animation: fadeIn 0.4s;">
+        <h3>Datos de Reserva</h3>
+        <div class="campo">
+          <label>Nombre</label>
+          <input type="text" [(ngModel)]="datosReserva.nombreCliente">
+        </div>
+        <div class="campo">
+          <label>Correo</label>
+          <input type="text" [(ngModel)]="datosReserva.correo">
+        </div>
+        <div class="campo">
+          <label>Cantidad de Personas</label>
+          <input type="number" [(ngModel)]="datosReserva.cantidadPersonas" min="1">
+        </div>
+        
+        <button class="btn-confirmar-reserva" (click)="reservarViaje()">
+          Confirmar
+        </button>
+     </div>
+
+      <div *ngIf="mensajeReserva" class="alerta-exito">
+         {{ mensajeReserva }}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<ng-template #noViaje>
+  <div class="no-viaje-container">
+    <p>No se encontró el viaje solicitado.</p>
+    <a [routerLink]="['/']" class="btn-volver">Volver al inicio</a>
+  </div>
+</ng-template>
