@@ -1,6 +1,6 @@
 require('dotenv').config(); // Carga variables de entorno desde .env
 const express = require('express');
-const stripe = require('stripe')('process.env.STRIPE_SECRET_KEY'); // Usa el modo Test
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); // Usa el modo Test
 const cors = require('cors');
 const fs = require('fs');
 
@@ -10,7 +10,7 @@ app.use(cors());
 
 app.post('/create-checkout-session', async (req, res) => {
   const { items, envio, total } = req.body;
-
+  console.log('Creando sesión de pago con:', process.env.STRIPE_SECRET_KEY);
   try {
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
