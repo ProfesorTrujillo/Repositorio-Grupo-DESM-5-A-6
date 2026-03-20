@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { CarritoService } from '../services/carrito-service';
 import { UbicacionComponent } from '../ubicacion-component/ubicacion-component';
+import { PagoService } from '../services/pago-service';
 
 @Component({
   selector: 'app-carrito-component',
@@ -11,6 +12,7 @@ import { UbicacionComponent } from '../ubicacion-component/ubicacion-component';
 })
 export class CarritoComponent {
   carrito = inject(CarritoService);
+  pagoService = inject(PagoService);
   trackById = (_: number, it: any) => it.id;
   actualizarCantidad(id: number, valor: string | number) {
     const cantidad = typeof valor === 'string' ? parseInt(valor, 10) : valor;
@@ -18,5 +20,8 @@ export class CarritoComponent {
       this.carrito.actualizarCantidad(id, cantidad);
       console.log('Cantidad actualizada:', { id, cantidad });
     }
+  }
+  pagar() {
+    this.pagoService.pagar();
   }
 }

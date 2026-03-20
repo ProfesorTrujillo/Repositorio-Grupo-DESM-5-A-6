@@ -2,10 +2,14 @@ import { Routes } from '@angular/router';
 import { MenuComponent } from './menu-component/menu-component';
 import { CarritoComponent } from './carrito-component/carrito-component';
 import { UbicacionComponent } from './ubicacion-component/ubicacion-component';
+import { PagoExitosoComponent } from './pago-exitoso/pago-exitoso';
+import { PagoCanceladoComponent } from './pago-cancelado/pago-cancelado';
 
 export const routes: Routes = [
     { path: '', component: MenuComponent, pathMatch: 'full' },
     { path: 'carrito', component: CarritoComponent },
-    { path: 'ubicacion', component: UbicacionComponent }
+    { path: 'ubicacion', component: UbicacionComponent },
+  { path: 'pago-exitoso', component: PagoExitosoComponent },
+  { path: 'pago-cancelado', component: PagoCanceladoComponent },
 ];
     

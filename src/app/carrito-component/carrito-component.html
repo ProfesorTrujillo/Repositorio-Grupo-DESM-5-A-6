@@ -32,6 +32,7 @@
         <p>Total a pagar: <strong>{{ carrito.total() | currency:'MXN':'symbol' }}</strong></p>
         <div style="margin-top: 12px; display: flex; gap: 8px;">
             <button (click)="carrito.vaciar()">Vaciar carrito</button>
+            <button (click)="pagar()">Pagar</button>
         </div>
     </div>
 <app-ubicacion [compacto]="true"></app-ubicacion>

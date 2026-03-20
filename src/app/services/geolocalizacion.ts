@@ -9,8 +9,8 @@ export class GeolocalizacionService {
   // Ubicación del restaurante (Centro de Aguascalientes aprox.)
   // Ajusta a tu dirección si lo deseas
   readonly restaurante: Coordenadas = {
-    latitud: 21.8810607,
-    longitud: -102.2954537
+    latitud: 21.853887069036983, 
+    longitud: -102.34087329074826
   };
   // Señales de estado
   private readonly _ubicacionUsuario = signal<Coordenadas | null>(null);
