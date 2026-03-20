@@ -1,10 +1,40 @@
-<section class="menu-container">
-  <h2>Nuestro Menú Especial</h2>
+<main class="menu-container">
+  <h2>Menú</h2>
+
+  <p *ngIf="platillos.length === 0">
+    Por el momento no hay platillos disponibles.
+  </p>
+
   <div class="grid">
-    <div class="card" *ngFor="let item of listaPlatillos">
-      <h3>{{ item.nombre }}</h3>
-      <p>{{ item.desc }}</p>
-      <span class="price">${{ item.precio }}</span>
-    </div>
+    <article class="card" *ngFor="let p of platillos; trackBy: trackById">
+      <div class="card-top">
+        <h3>{{ p.nombre }}</h3>
+        <span class="badge" [class.no-disponible]="!p.disponible">
+          {{ p.disponible ? 'Disponible' : 'Agotado' }}
+        </span>
+      </div>
+
+      <p class="descripcion">{{ p.descripcion }}</p>
+
+      <div class="card-bottom">
+        <span class="precio">
+          {{ p.precio | currency:'MXN':'symbol':'1.0-0' }}
+        </span>
+
+        <button 
+          class="btn"
+          (click)="agregar(p)"
+          [disabled]="!p.disponible">
+          Agregar
+        </button>
+
+        <a routerLink="/carrito" class="link-carrito">
+          Ver carrito 
+          <span *ngIf="carrito.itemCount() > 0" class="badge-cart">
+            {{ carrito.itemCount() }}
+          </span>
+        </a>
+      </div>
+    </article>
   </div>
-</section>
+</main>

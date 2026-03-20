@@ -1,0 +1,113 @@
+.carrito {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.carrito h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #222;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla thead {
+  background-color: #f8f9fa;
+}
+
+.tabla th {
+  padding: 14px;
+  font-weight: 600;
+  color: #444;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tabla td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+  color: #333;
+}
+
+.tabla tbody tr:hover {
+  background-color: #fafafa;
+}
+
+input[type="number"] {
+  width: 70px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:first-of-type {
+  background-color: #ff4d4f;
+  color: white;
+}
+
+button:first-of-type:hover {
+  background-color: #e63946;
+}
+
+.totales {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px solid #f0f0f0;
+  text-align: right;
+}
+
+.totales p {
+  margin: 6px 0;
+  font-size: 16px;
+}
+
+.totales strong {
+  font-size: 18px;
+}
+
+.totales .total-final {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+}
+
+.acciones {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.acciones button {
+  background-color: #111;
+  color: white;
+}
+
+
+.acciones button:hover {
+  background-color: #333;
+}

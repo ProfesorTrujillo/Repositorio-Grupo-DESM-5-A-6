@@ -1,3 +1,13 @@
+/* FIX Leaflet cuando hay reglas globales para img/video */
+.leaflet-container .leaflet-marker-icon,
+.leaflet-container .leaflet-marker-shadow,
+.leaflet-container .leaflet-tile,
+.leaflet-container img.leaflet-image-layer,
+.leaflet-container .leaflet-pane > img {
+  max-width: none !important;
+  max-height: none !important;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;

@@ -1,5 +1,13 @@
 <app-header></app-header>
-<main>
-  <app-menu></app-menu>
-</main>
+
+<nav class="nav">
+  <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Menú</a>
+  <a routerLink="/carrito" routerLinkActive="active">
+    Carrito
+    <span *ngIf="carrito.itemCount() > 0" class="cart-badge">{{ carrito.itemCount() }}</span>
+  </a>
+</nav>
+
+<router-outlet></router-outlet>
+
 <app-footer></app-footer>

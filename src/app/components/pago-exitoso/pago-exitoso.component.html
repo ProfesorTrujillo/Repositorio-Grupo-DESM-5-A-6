@@ -1,0 +1,15 @@
+<div style="text-align: center; padding: 60px; font-family: Arial, sans-serif; max-width: 700px; margin: 40px auto;">
+  <h1 style="color: #28a745;"> ¡Pago realizado con éxito!</h1>
+  
+  <p style="font-size: 18px; margin: 20px 0;">{{ mensaje }}</p>
+
+  <div *ngIf="folio" style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0;">
+    <p><strong>Folio:</strong> {{ folio }}</p>
+    <p><strong>Total pagado:</strong> ${{ total }} MXN</p>
+    <p><strong>Fecha:</strong> {{ fecha }}</p>
+  </div>
+
+  <a routerLink="/" style="padding: 12px 30px; background: #111; color: white; text-decoration: none; border-radius: 8px;">
+    Volver al menú
+  </a>
+</div>

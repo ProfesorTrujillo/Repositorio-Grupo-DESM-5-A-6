@@ -1,0 +1,18 @@
+[
+  {
+    "folio": "DAE19D15",
+    "cart": [
+      {
+        "id": 3,
+        "nombre": "Enchiladas Verdes",
+        "precio": 12.5,
+        "cantidad": 3
+      }
+    ],
+    "total": 163.5,
+    "description": "Pedido de comida - Envío $120",
+    "fecha": "20/3/2026, 1:22:41 p.m.",
+    "estado": "Pagado (Stripe Test)",
+    "sessionId": "cs_test_a1bTBfb19nbk2j6P2nyoB1XjiYrkndCTJcjEBbx93FnnAvC7W5L2f7muzH"
+  }
+]

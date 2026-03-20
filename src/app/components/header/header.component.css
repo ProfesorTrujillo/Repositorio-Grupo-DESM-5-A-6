@@ -1,0 +1,39 @@
+.header {
+  background: linear-gradient(to bottom, #111, #1a1a1a);
+  padding: 30px 20px;
+  text-align: center;
+  color: #d4af37;
+  border-bottom: 4px solid #d4af37;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3.2rem;
+  letter-spacing: 4px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.slogan {
+  margin: 8px 0 0;
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #aaa;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+  .slogan {
+    font-size: 1.1rem;
+  }
+}

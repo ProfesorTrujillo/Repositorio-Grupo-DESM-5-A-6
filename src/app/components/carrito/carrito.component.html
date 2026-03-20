@@ -1,0 +1,55 @@
+<div class="carrito-container">
+  <h2>Tu Carrito</h2>
+
+  <div *ngIf="carrito.items().length === 0; else hayItems">
+    <p>Tu carrito está vacío. ¡Agrega algo del menú!</p>
+    <button routerLink="/">Volver al Menú</button>
+  </div>
+
+  <ng-template #hayItems>
+    <table>
+      <thead>
+        <tr>
+          <th>Platillo</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Subtotal</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of carrito.items(); trackBy: trackById">
+          <td>{{ item.nombre }}</td>
+          <td>{{ item.precio | currency:'MXN' }}</td>
+          <td>
+            <input type="number" min="1" [value]="item.cantidad"
+                   (change)="actualizarCantidad(item.id, $event)" style="width: 60px;" />
+          </td>
+          <td>{{ (item.precio * item.cantidad) | currency:'MXN' }}</td>
+          <td>
+            <button (click)="eliminarItem(item.id)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="resumen">
+      <p>Subtotal: {{ carrito.subtotal() | currency:'MXN' }}</p>
+      <p>IVA (16%): {{ carrito.iva() | currency:'MXN' }}</p>
+      <p>Envío: {{ carrito.envio() | currency:'MXN' }}</p>
+      <p><strong>Total: {{ carrito.total() | currency:'MXN' }}</strong></p>
+    </div>
+
+    <app-ubicacion [compacto]="true"></app-ubicacion>
+
+    <div class="acciones">
+      <button (click)="vaciarCarrito()">Vaciar Carrito</button>
+      <button routerLink="/">Seguir comprando</button>
+      <button (click)="procederAlPago()" 
+              [disabled]="carrito.total() === 0"
+              style="background-color: #28a745; color: white;">
+        Proceder al pago
+      </button>
+    </div>
+  </ng-template>
+</div>
