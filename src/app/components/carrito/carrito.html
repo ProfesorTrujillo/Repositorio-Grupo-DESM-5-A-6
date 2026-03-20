@@ -71,6 +71,10 @@
           <div class="d-grid gap-2">
             <button class="btn btn-danger btn-block mb-2" (click)="carrito.vaciar()">Vaciar Carrito</button>
           </div>
+          <div class="d-grid gap-2">
+            <button class="btn btn-success btn-block" (click)="pagar()" [disabled]="carrito.items().length === 0">Proceder al Pago</button>
+          </div>
+
         </div>
       </div>
     </div>

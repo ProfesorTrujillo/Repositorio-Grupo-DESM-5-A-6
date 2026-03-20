@@ -2,14 +2,13 @@ import { Component, inject, signal } from '@angular/core';
 import { CommonModule, CurrencyPipe } from '@angular/common'; // 👈 importa esto
 import { MenuService, Platillo } from '../../services/menu';
 import { Car } from '../../services/car';
-import { RouterLink } from '@angular/router';
 
 
 
 @Component({
   selector: 'app-menu',
   standalone: true, // 👈 asegúrate de que esté
-  imports: [CommonModule, CurrencyPipe, RouterLink], // 👈 agrega aquí CommonModule y CurrencyPipe
+  imports: [CommonModule, CurrencyPipe ], // 👈 agrega aquí CommonModule y CurrencyPipe
   templateUrl: './menu.html',
   styleUrls: ['./menu.css']
 })
