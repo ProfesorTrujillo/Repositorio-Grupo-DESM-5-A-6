@@ -18,9 +18,14 @@ export class CarritoService {
   readonly subtotal = computed(
     () => this._items().reduce((acc, it) => acc + it.platillo.precio * it.cantidad, 0)
   );
-  readonly iva     = computed(() => this.subtotal() * 0.16);
-  readonly total   = computed(() => this.subtotal() + this.iva());
-
+readonly iva = computed(() => this.subtotal() * 0.16); 
+readonly envio = signal<number>(0); 
+// Recalcula total 
+readonly total = computed(() => this.subtotal() + this.iva()+this.envio()); 
+// <<<--- Agrega este método 
+setEnvio(monto: number): void { 
+this.envio.set(Math.max(0, Math.round(monto))); 
+} 
   constructor() {
     // Persistencia simple en localStorage
     try {
@@ -67,4 +72,5 @@ export class CarritoService {
   vaciar(): void {
     this._items.set([]);
   }
+  
 }

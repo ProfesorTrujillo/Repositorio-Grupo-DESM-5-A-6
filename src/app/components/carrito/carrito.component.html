@@ -28,13 +28,8 @@
           <td class="td-nombre">{{ it.platillo.nombre }}</td>
           <td class="col-precio">{{ it.platillo.precio | currency:'MXN':'symbol':'1.0-0' }}</td>
           <td class="col-cantidad">
-            <input
-              type="number"
-              min="0"
-              class="input-cantidad"
-              [value]="it.cantidad"
-              (change)="actualizarCantidad(it.id, $any($event.target).value)"
-            />
+            <input type="number" min="0" class="input-cantidad" [value]="it.cantidad"
+              (change)="actualizarCantidad(it.id, $any($event.target).value)" />
           </td>
           <td class="col-importe">
             {{ (it.platillo.precio * it.cantidad) | currency:'MXN':'symbol':'1.0-0' }}
@@ -56,14 +51,25 @@
         <span>IVA (16%)</span>
         <strong>{{ carrito.iva() | currency:'MXN':'symbol':'1.2-2' }}</strong>
       </div>
+      <div class="totales-row envio-row">
+        <span>Envío</span>
+        <strong>{{ carrito.envio() | currency:'MXN':'symbol':'1.2-2' }}</strong>
+      </div>
       <div class="totales-row total-row">
         <span>Total a pagar</span>
         <strong>{{ carrito.total() | currency:'MXN':'symbol':'1.2-2' }}</strong>
       </div>
 
+      <!-- Ubicación para calcular envío -->
+      <app-ubicacion [compacto]="true"></app-ubicacion>
+
       <div class="acciones">
         <button class="btn-vaciar" (click)="carrito.vaciar()">Vaciar carrito</button>
         <a routerLink="/" class="btn-secundario">← Seguir comprando</a>
+        <!-- Botón de pago con Stripe -->
+        <button class="btn-pagar" (click)="pagar()" [disabled]="pagando">
+          {{ pagando ? 'Redirigiendo…' : '💳 Pagar con Stripe' }}
+        </button>
       </div>
     </div>
   </div>

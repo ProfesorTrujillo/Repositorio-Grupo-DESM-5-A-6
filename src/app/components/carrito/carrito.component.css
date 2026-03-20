@@ -202,3 +202,27 @@
   border-color: #b8860b;
   color: #f5e6c8;
 }
+
+/* ── Botón Pagar con Stripe ── */
+.btn-pagar {
+  background: #635bff;
+  border: none;
+  color: #fff;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 24px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.25s, opacity 0.2s;
+}
+
+.btn-pagar:hover:not(:disabled) {
+  background: #4f46e5;
+}
+
+.btn-pagar:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

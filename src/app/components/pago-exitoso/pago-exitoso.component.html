@@ -1,0 +1,26 @@
+<section class="pago-exitoso">
+  <div class="icono">✅</div>
+  <h1 class="titulo">¡Pago Exitoso!</h1>
+  <p class="subtitulo">Tu pedido ha sido confirmado y pagado con Stripe.</p>
+
+  <div class="detalle-card">
+    <div class="detalle-row">
+      <span class="label">Total pagado</span>
+      <strong class="valor">{{ total | currency:'MXN':'symbol':'1.2-2' }}</strong>
+    </div>
+    <div class="detalle-row">
+      <span class="label">Folio del pedido</span>
+      <strong class="valor folio">{{ folio }}</strong>
+    </div>
+    <div class="detalle-row">
+      <span class="label">Fecha y hora</span>
+      <strong class="valor">{{ fecha }}</strong>
+    </div>
+    <div class="detalle-row">
+      <span class="label">Estado</span>
+      <span class="badge-pagado">Pagado (Stripe Test)</span>
+    </div>
+  </div>
+
+  <a routerLink="/" class="btn-volver">← Volver al menú</a>
+</section>
