@@ -1,9 +1,34 @@
 <section class="menu">
 
-  <div class="card" *ngFor="let platillo of menu">
+  <div class="card" *ngFor="let platillo of menu" [class.no-stock]="!platillo.disponible">
     <img [src]="platillo.imagen" alt="Platillo">
     <h3>{{ platillo.nombre }}</h3>
     <p>${{ platillo.precio }}</p>
+
+    <p class="no-disponible" *ngIf="!platillo.disponible">
+      No disponible
+    </p>
+
+    <div class="contador">
+
+      <button class="icon-btn"
+        [disabled]="!platillo.disponible"
+        (click)="quitar(platillo)">
+        <span class="material-icons">remove</span>
+      </button>
+
+      <span class="cantidad">
+        {{ cantidadEnCarrito(platillo.id) }}
+      </span>
+
+      <button class="icon-btn"
+        [disabled]="!platillo.disponible"
+        (click)="agregar(platillo)">
+        <span class="material-icons">add</span>
+      </button>
+
+    </div>
+
   </div>
 
 </section>

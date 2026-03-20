@@ -1,0 +1,13 @@
+<section>
+  <h2>Ubicación y envío</h2>
+
+  <p *ngIf="geo.distanciaKm() as d">
+    Distancia: {{ d }} km
+  </p>
+
+  <p>
+    Envío: {{ carrito.envio() | currency:'MXN':'symbol' }}
+  </p>
+
+  <div id="map" class="mapa"></div>
+</section>

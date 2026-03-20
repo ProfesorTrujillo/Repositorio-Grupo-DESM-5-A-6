@@ -1,0 +1,83 @@
+<section class="carrito-container">
+
+  <h2 class="carrito-title">Tu Pedido</h2>
+
+  <p class="empty" *ngIf="carrito.items().length === 0">
+    No hay productos en el carrito.
+  </p>
+
+  <div class="carrito-items" *ngIf="carrito.items().length > 0">
+
+    <div class="carrito-card" *ngFor="let it of carrito.items()">
+
+      <div class="info">
+        <h3>{{ it.nombre }}</h3>
+        <p>{{ it.precio | currency:'MXN':'symbol' }}</p>
+      </div>
+
+      <div class="acciones">
+
+        <button class="icon-btn" (click)="actualizarCantidad(it.id, it.cantidad - 1)">
+          <span class="material-icons">remove</span>
+        </button>
+
+        <span class="cantidad">{{ it.cantidad }}</span>
+
+        <button class="icon-btn" (click)="actualizarCantidad(it.id, it.cantidad + 1)">
+          <span class="material-icons">add</span>
+        </button>
+
+        <button class="delete-btn" (click)="carrito.eliminar(it.id)">
+          <span class="material-icons">delete</span>
+        </button>
+
+      </div>
+
+      <div class="importe">
+        {{ it.precio * it.cantidad | currency:'MXN':'symbol' }}
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="resumen" *ngIf="carrito.items().length > 0">
+
+    <div class="resumen-card">
+      <p>Subtotal: {{ carrito.subtotal() | currency:'MXN':'symbol' }}</p>
+      <p>Envío: {{ carrito.envio() | currency:'MXN':'symbol' }}</p>
+      <p>IVA: {{ carrito.iva() | currency:'MXN':'symbol' }}</p>
+      <h3>Total: {{ carrito.total() | currency:'MXN':'symbol' }}</h3>
+      <a routerLink="/ubicacion">
+        <button class="primary-btn">
+          Detalles de envío
+        </button>
+      </a>
+    </div>
+
+    <div class="resumen-actions">
+      <button class="secondary-btn" (click)="carrito.vaciar()">
+        <span class="material-icons">remove_shopping_cart</span>
+        Vaciar
+      </button>
+
+      <a routerLink="/">
+        <button class="primary-btn">
+          <span class="material-icons">arrow_back</span>
+          Seguir comprando
+        </button>
+      </a>
+
+
+      <button class="secondary-btn" (click)="pagar()">
+        Pagar con Stripe
+         <span class="material-icons">shopping_bag</span>
+      </button>
+     
+      
+
+    </div>
+
+  </div>
+
+</section>
