@@ -1,6 +1,6 @@
 require('dotenv').config(); // Carga variables de entorno desde .env
 const express = require('express');
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); // Usa el modo Test
+const stripe = require('stripe')('process.env.STRIPE_SECRET_KEY'); // Usa el modo Test
 const cors = require('cors');
 const fs = require('fs');
 
