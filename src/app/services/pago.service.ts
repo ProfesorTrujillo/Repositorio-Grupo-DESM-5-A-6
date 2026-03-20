@@ -3,28 +3,11 @@ import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
 import { CarritoService } from './car.service';
 
-// ================================================================
-//  Servicio de Pagos con Stripe
-//  Basado en la Guía Paso a Paso 3.2 de Stripe en Angular
-//
-//  Este servicio usa DOS llaves:
-//
-//  1. LLAVE PÚBLICA (pk_test_...) → se usa aquí en el frontend
-//     para cargar @stripe/stripe-js.
-//     Se puede exponer en Angular de forma segura.
-//
-//  2. LLAVE SECRETA (sk_test_...) → NUNCA va aquí.
-//     Vive SOLO en backend/server.js mediante la variable .env
-//
-// ================================================================
 
 @Injectable({ providedIn: 'root' })
 export class PagoService {
-    // ------------------------------------------------------------------
-    //  ⚠️  REEMPLAZA ESTE VALOR con tu Publishable Key (pk_test_...)
-    //      La encuentras en: Stripe Dashboard → Developers → API Keys
-    // ------------------------------------------------------------------
-    private readonly LLAVE_PUBLICA_STRIPE = 'AQUI_VA_TU_LLAVE_PUBLICA_PK_TEST_XXXXXXXXXX';
+
+    private readonly LLAVE_PUBLICA_STRIPE = 'pk_live_51TCK9d39BYzxll2Ay8rByYfucwo8gXlBJJZYbM87N7bHSP501gw9cDUSfvRwlGrvcsG3CBYfUgdyoXOUKQMkupoe00mcnT7RjI';
 
     // URL del backend seguro (donde vive la llave SECRETA)
     private readonly backendUrl = 'http://localhost:3000';
