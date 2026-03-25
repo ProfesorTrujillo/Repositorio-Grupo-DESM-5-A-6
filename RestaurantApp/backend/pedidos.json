@@ -1,0 +1,427 @@
+[
+  {
+    "folio": "72bf4836-6ad4-4a7f-aa25-47e0274ce8f7",
+    "items": [
+      {
+        "id": 1,
+        "platillo": {
+          "id": 1,
+          "nombre": "El incio después del fin",
+          "categoria": "ksks",
+          "descripcion": "TurtleMe",
+          "precio": 19.99,
+          "disponibilidad": true
+        },
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 19.99,
+    "iva": 3.1984,
+    "envio": 120,
+    "total": 143.1884,
+    "descripcion": "Pedido de restaurante — 1 platillo(s)",
+    "fecha": "2026-03-25T20:06:47.878Z",
+    "estado": "Pagado (Stripe Test)",
+    "sessionId": "cs_test_b1fs7F7i3KnpUxJqeMOBXcPpqCsLDpUOnFx2Goy71ep2lxPozGh54AOpZW"
+  },
+  {
+    "folio": "30341266-ef27-4967-ac2b-3b00c06ffb39",
+    "items": [
+      {
+        "id": 1,
+        "platillo": {
+          "id": 1,
+          "nombre": "El incio después del fin",
+          "categoria": "ksks",
+          "descripcion": "TurtleMe",
+          "precio": 19.99,
+          "disponibilidad": true
+        },
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 19.99,
+    "iva": 3.1984,
+    "envio": 120,
+    "total": 143.1884,
+    "descripcion": "Pedido de restaurante — 1 platillo(s)",
+    "fecha": "2026-03-25T20:07:06.528Z",
+    "estado": "Pagado (Stripe Test)",
+    "sessionId": "cs_test_b1xwBYtHqaqRXFjfcAyTUWgr5om351RIiigBxxsz16NyOOU8bouKapuNTe"
+  },
+  {
+    "folio": "aaf1062b-76fb-44d2-b19c-7705ad68a58f",
+    "items": [
+      {
+        "id": 1,
+        "platillo": {
+          "id": 1,
+          "nombre": "El incio después del fin",
+          "categoria": "ksks",
+          "descripcion": "TurtleMe",
+          "precio": 19.99,
+          "disponibilidad": true
+        },
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 19.99,
+    "iva": 3.1984,
+    "envio": 0,
+    "total": 23.188399999999998,
+    "descripcion": "Pedido de restaurante — 1 platillo(s)",
+    "fecha": "2026-03-25T20:12:07.070Z",
+    "estado": "Pagado (Stripe Test)",
+    "sessionId": "cs_test_b19YWb2IIGCbJK4xt13ktuYJ9EwyW7C7YxJIrkk3rbN88NkFg3tNrchb7N"
+  },
+  {
+    "folio": "9a43f007-c9c7-4794-814f-4ddcc9c5d487",
+    "items": [
+      {
+        "id": 1,
+        "platillo": {
+          "id": 1,
+          "nombre": "El incio después del fin",
+          "categoria": "ksks",
+          "descripcion": "TurtleMe",
+          "precio": 19.99,
+          "disponibilidad": true
+        },
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 19.99,
+    "iva": 3.1984,
+    "envio": 120,
+    "total": 143.1884,
+    "descripcion": "Pedido de restaurante — 1 platillo(s)",
+    "fecha": "2026-03-25T20:14:51.727Z",
+    "estado": "Pagado (Stripe Test)",
+    "sessionId": "cs_test_b1HnsUNdWXaRR8M6byhta5WzBh1AOci6cUkIxhyp1fH52VbJIdvcGOd0NE"
+  },
+  {
+    "folio": "eca9c945-4327-40c8-82c5-3c6b0a6b14ac",
+    "items": [
+      {
+        "id": 1,
+        "platillo": {
+          "id": 1,
+          "nombre": "El incio después del fin",
+          "categoria": "ksks",
+          "descripcion": "TurtleMe",
+          "precio": 19.99,
+          "disponibilidad": true
+        },
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 19.99,
+    "iva": 3.1984,
+    "envio": 120,
+    "total": 143.1884,
+    "descripcion": "Pedido de restaurante — 1 platillo(s)",
+    "fecha": "2026-03-25T20:17:34.110Z",
+    "estado": "Pagado (Stripe Test)",
+    "sessionId": "cs_test_b1BqT4WWxS6TrJqYC3qKespnpfYIzWIJYveXf7V5sFJweWazea6sy5bzj1"
+  },
+  {
+    "folio": "1a2b90ab-c589-4ce2-a108-51ef256f748a",
+    "items": [
+      {
+        "id": 1,
+        "platillo": {
+          "id": 1,
+          "nombre": "El incio después del fin",
+          "categoria": "ksks",
+          "descripcion": "TurtleMe",
+          "precio": 19.99,
+          "disponibilidad": true
+        },
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 19.99,
+    "iva": 3.1984,
+    "envio": 0,
+    "total": 23.188399999999998,
+    "descripcion": "Pedido de restaurante — 1 platillo(s)",
+    "fecha": "2026-03-25T20:23:18.247Z",
+    "estado": "Pagado (Stripe Test)",
+    "sessionId": "cs_test_b1OcXFwBhX7oh2rQYHmU8biZmMRxDgzaj2rJmz0hFkgyNyUtM4Po0ck1Pk"
+  },
+  {
+    "folio": "1ebd2804-e3d6-4bfc-a89e-0865de587fca",
+    "items": [
+      {
+        "id": 1,
+        "platillo": {
+          "id": 1,
+          "nombre": "El incio después del fin",
+          "categoria": "ksks",
+          "descripcion": "TurtleMe",
+          "precio": 19.99,
+          "disponibilidad": true
+        },
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 19.99,
+    "iva": 3.1984,
+    "envio": 120,
+    "total": 143.1884,
+    "descripcion": "Pedido de restaurante — 1 platillo(s)",
+    "fecha": "2026-03-25T20:23:29.548Z",
+    "estado": "Pagado (Stripe Test)",
+    "sessionId": "cs_test_b1tKJUVefUEeXx6o9rfIIZvZXVqBJxIqjCvBbu7M7sGbCSCzj8tswLUOCV"
+  },
+  {
+    "folio": "41e187ac-71ab-4a9f-a544-448f9647d798",
+    "items": [
+      {
+        "id": 1,
+        "platillo": {
+          "id": 1,
+          "nombre": "El incio después del fin",
+          "categoria": "ksks",
+          "descripcion": "TurtleMe",
+          "precio": 19.99,
+          "disponibilidad": true
+        },
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 19.99,
+    "iva": 3.1984,
+    "envio": 0,
+    "total": 23.188399999999998,
+    "descripcion": "Pedido de restaurante — 1 platillo(s)",
+    "fecha": "2026-03-25T20:26:46.803Z",
+    "estado": "Pagado (Stripe Test)",
+    "sessionId": "cs_test_b1dWzib6qOYh8hGCNJQp5PrQl1nR1TnHuPrnNUH00WArHyErrc5CynX7DF"
+  },
+  {
+    "folio": "00c339db-bf69-46b1-b386-ebfcec6248ee",
+    "items": [
+      {
+        "id": 1,
+        "platillo": {
+          "id": 1,
+          "nombre": "El incio después del fin",
+          "categoria": "ksks",
+          "descripcion": "TurtleMe",
+          "precio": 19.99,
+          "disponibilidad": true
+        },
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 19.99,
+    "iva": 3.1984,
+    "envio": 120,
+    "total": 143.1884,
+    "descripcion": "Pedido de restaurante — 1 platillo(s)",
+    "fecha": "2026-03-25T20:26:53.086Z",
+    "estado": "Pagado (Stripe Test)",
+    "sessionId": "cs_test_b1F2Zx5uMQbC0SINnIKfkXJH5cqwpeSKbzv2ppkaiHHrKRCmCvCYiaXUwf"
+  },
+  {
+    "folio": "c33ca043-489d-4278-ad9e-2857cde014f0",
+    "items": [
+      {
+        "id": 1,
+        "platillo": {
+          "id": 1,
+          "nombre": "El incio después del fin",
+          "categoria": "ksks",
+          "descripcion": "TurtleMe",
+          "precio": 19.99,
+          "disponibilidad": true
+        },
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 19.99,
+    "iva": 3.1984,
+    "envio": 120,
+    "total": 143.1884,
+    "descripcion": "Pedido de restaurante — 1 platillo(s)",
+    "fecha": "2026-03-25T20:29:36.342Z",
+    "estado": "Pagado (Stripe Test)",
+    "sessionId": "cs_test_b1PT7u9clTe975caltJq6ZNlGEwOIWbvqmraQEPPj9PJdlAxDMRzCGENEz"
+  },
+  {
+    "folio": "b93090e8-98de-4790-89fd-d36fd4f7af35",
+    "items": [
+      {
+        "id": 1,
+        "platillo": {
+          "id": 1,
+          "nombre": "El incio después del fin",
+          "categoria": "ksks",
+          "descripcion": "TurtleMe",
+          "precio": 19.99,
+          "disponibilidad": true
+        },
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 19.99,
+    "iva": 3.1984,
+    "envio": 120,
+    "total": 143.1884,
+    "descripcion": "Pedido de restaurante — 1 platillo(s)",
+    "fecha": "2026-03-25T20:29:45.540Z",
+    "estado": "Pagado (Stripe Test)",
+    "sessionId": "cs_test_b1PHcdbREMjJVMZNA2tPIZOi9s7iYaay3zXqQZI952a9RgkMCKRtzIogOx"
+  },
+  {
+    "folio": "fe703b0f-535f-4254-adcc-cb0cea89c40f",
+    "items": [
+      {
+        "id": 1,
+        "platillo": {
+          "id": 1,
+          "nombre": "El incio después del fin",
+          "categoria": "ksks",
+          "descripcion": "TurtleMe",
+          "precio": 19.99,
+          "disponibilidad": true
+        },
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 19.99,
+    "iva": 3.1984,
+    "envio": 0,
+    "total": 23.188399999999998,
+    "descripcion": "Pedido de restaurante — 1 platillo(s)",
+    "fecha": "2026-03-25T20:31:06.875Z",
+    "estado": "Pagado (Stripe Test)",
+    "sessionId": "cs_test_b1eZsqWQ7G7IsWVdFFYZkgzwt2y6KK7Fj7Q09hXAcF0445loiWPRC9fHnq"
+  },
+  {
+    "folio": "61eee195-73b1-4dfd-a0c6-b2d477918639",
+    "items": [
+      {
+        "id": 1,
+        "platillo": {
+          "id": 1,
+          "nombre": "El incio después del fin",
+          "categoria": "ksks",
+          "descripcion": "TurtleMe",
+          "precio": 19.99,
+          "disponibilidad": true
+        },
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 19.99,
+    "iva": 3.1984,
+    "envio": 120,
+    "total": 143.1884,
+    "descripcion": "Pedido de restaurante — 1 platillo(s)",
+    "fecha": "2026-03-25T20:31:55.986Z",
+    "estado": "Pagado (Stripe Test)",
+    "sessionId": "cs_test_b1AAH4XmjW6XdzZl18sJZ5MJYB8lY4TUFM3pDsmTJFSQCCbxWc9inGBvD6"
+  },
+  {
+    "folio": "c5f0c457-749f-4e7b-a502-599b3d57cd61",
+    "items": [
+      {
+        "id": 1,
+        "platillo": {
+          "id": 1,
+          "nombre": "El incio después del fin",
+          "categoria": "ksks",
+          "descripcion": "TurtleMe",
+          "precio": 19.99,
+          "disponibilidad": true
+        },
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 19.99,
+    "iva": 3.1984,
+    "envio": 120,
+    "total": 143.1884,
+    "descripcion": "Pedido de restaurante — 1 platillo(s)",
+    "fecha": "2026-03-25T20:34:18.883Z",
+    "estado": "Pagado (Stripe Test)",
+    "sessionId": "cs_test_b1V1JRRsSWinTL4RmVjkkapGhp14zOuhKxSovHXSgRM5RPltFxl3ZFEEmr"
+  },
+  {
+    "folio": "4a2af0d8-5d72-448e-84fc-c796d58450ca",
+    "items": [
+      {
+        "id": 1,
+        "platillo": {
+          "id": 1,
+          "nombre": "El incio después del fin",
+          "categoria": "ksks",
+          "descripcion": "TurtleMe",
+          "precio": 19.99,
+          "disponibilidad": true
+        },
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 19.99,
+    "iva": 3.1984,
+    "envio": 0,
+    "total": 23.188399999999998,
+    "descripcion": "Pedido de restaurante — 1 platillo(s)",
+    "fecha": "2026-03-25T20:34:46.214Z",
+    "estado": "Pagado (Stripe Test)",
+    "sessionId": "cs_test_b1nda1rbBcMwM2i2F1gXU2xT9Wull7QRXJWFqmNfrpbgS6vgrsqrXwJFgZ"
+  },
+  {
+    "folio": "8749acd1-00a8-43bd-9062-1c15f7b57a6d",
+    "items": [
+      {
+        "id": 1,
+        "platillo": {
+          "id": 1,
+          "nombre": "El incio después del fin",
+          "categoria": "ksks",
+          "descripcion": "TurtleMe",
+          "precio": 19.99,
+          "disponibilidad": true
+        },
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 19.99,
+    "iva": 3.1984,
+    "envio": 120,
+    "total": 143.1884,
+    "descripcion": "Pedido de restaurante — 1 platillo(s)",
+    "fecha": "2026-03-25T20:48:21.312Z",
+    "estado": "Pagado (Stripe Test)",
+    "sessionId": "cs_test_b1bHgMhHayQX5byPH4f8LNUFaIJBsMaTsdaHGMC2w4EKjRmhUUw6z1uLuc"
+  },
+  {
+    "folio": "87f3c08d-c332-4f2e-8890-2cac408bba47",
+    "items": [
+      {
+        "id": 1,
+        "platillo": {
+          "id": 1,
+          "nombre": "El incio después del fin",
+          "categoria": "ksks",
+          "descripcion": "TurtleMe",
+          "precio": 19.99,
+          "disponibilidad": true
+        },
+        "cantidad": 1
+      }
+    ],
+    "subtotal": 19.99,
+    "iva": 3.1984,
+    "envio": 120,
+    "total": 143.1884,
+    "descripcion": "Pedido de restaurante — 1 platillo(s)",
+    "fecha": "2026-03-25T20:53:10.322Z",
+    "estado": "Pagado (Stripe Test)",
+    "sessionId": "cs_test_b1cgtmOwWBm4sOynA3NZOGdfBoBiOuHzFnSsyZODvqKPHRideZY8392zmM"
+  }
+]

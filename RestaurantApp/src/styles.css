@@ -1,0 +1,19 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+app-root{
+    display: block;
+    width: 100%;
+}
+/* FIX Leaflet cuando hay reglas globales para img/video */
+.leaflet-container .leaflet-marker-icon,
+.leaflet-container .leaflet-marker-shadow,
+.leaflet-container .leaflet-tile,
+.leaflet-container img.leaflet-image-layer,
+.leaflet-container .leaflet-pane > img {
+ max-width: none !important;
+ max-height: none !important;
+}

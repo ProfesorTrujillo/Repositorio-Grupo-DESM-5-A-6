@@ -1,0 +1,85 @@
+
+.pago-cancelado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; 
+    text-align: center;
+    padding: 20px;
+    background-color: #fff; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.icono {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    animation: scaleIn 0.5s ease-out;
+}
+
+.titulo {
+    color: #c0392b; 
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.subtitulo {
+    color: #555;
+    font-size: 1.1rem;
+    max-width: 400px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.acciones {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.btn-volver, .btn-menu {
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.btn-volver {
+    background-color: #16B97A;
+    color: white;
+    box-shadow: 0 4px 15px rgba(60, 192, 43, 0.3);
+}
+
+.btn-volver:hover {
+    background-color: #119361;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(53, 192, 43, 0.4);
+}
+
+.btn-menu {
+    background-color: transparent;
+    color: #7f8c8d;
+    border: 2px solid #bdc3c7;
+}
+
+.btn-menu:hover {
+    background-color: #bdc3c7;
+    color: white;
+}
+
+@keyframes scaleIn {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 480px) {
+    .titulo { font-size: 1.8rem; }
+    .subtitulo { font-size: 1rem; }
+}

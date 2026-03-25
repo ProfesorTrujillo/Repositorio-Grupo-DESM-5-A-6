@@ -1,0 +1,244 @@
+.menu-pagina{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5%;
+}
+.menu-encabezado{
+    text-align: center;
+    margin-bottom: 48px;
+}
+.menu-etiqueta {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #000;
+  background: #A7FF84;
+  padding: 4px 14px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #A7FF84;
+}
+
+.menu-titulo {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 600;
+  color: #000;
+  line-height: 1.15;
+  margin-bottom: 10px;
+  letter-spacing: -.02em;
+}
+
+.menu-subtitulo {
+  font-size: 1.05rem;
+  color: #000;
+  max-width: 440px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  border-radius: #e9fbea;
+  border: 1px solid #e9fbea;
+  box-shadow: #A7FF84;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  border-radius: 20px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: #fcebeb;
+}
+
+
+.card-agotado {
+  opacity: .72;
+  filter: grayscale(.2);
+}
+
+.card-agotado::after {
+  content: 'Agotado';
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  background: #fcebeb;
+  color: #a32d2d;
+  border: 1px solid #f09595;
+  padding: 3px 9px;
+  border-radius: 10px;
+}
+
+.card-content {
+  padding: 22px 22px 14px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: #000;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.card-content p {
+  font-size: 13px;
+  color: #000;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.card-content p strong {
+  color: #000;
+  font-weight: 700;
+}
+
+.card-content .descripcion {
+  font-size: 13px;
+  color: #000;
+  line-height: 1.65;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-footer {
+  padding: 14px 22px 20px;
+  border-top: 1px solid #656565;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #cad6c6;
+}
+
+.card-footer > p {
+  font-size: 13px;
+  color: #000;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.card-footer > p strong {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+  line-height: 1.1;
+}
+
+.card-acciones {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.btn-agregar {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 16px;
+  background-color: #000;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  border: 2px solid #000;
+  cursor: pointer;
+}
+
+.btn-agregar::before {
+  content: '+';
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.btn-agregar:hover:not(:disabled) {
+  background-color: #000;
+  transform: scale(1.04);
+}
+
+.btn-agregar:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.btn-agregar:disabled {
+  background-color: #000;
+  color: #fff;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-detalles {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  background: transparent;
+  color: #0A2572;
+  border: 1.8px solid #0A2572;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  text-decoration: none;
+  transition: background-color transparent, border-color #0a2572, color #0a2572;
+  white-space: nowrap;
+}
+
+.btn-detalles:hover {
+  background-color: transparent;
+  border-color: #0a2572;
+  color: #0a2572;
+}
+
+
+.lista-vacia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 80px 24px;
+  background: #fff;
+  border-radius: 20px;
+  border: 5px solid #173404;
+  text-align: center;
+}
+
+.icono-vacio {
+  font-size: 52px;
+  line-height: 1;
+}
+
+.lista-vacia p {
+  font-size: 17px;
+  color: #000;
+  font-weight: 500;
+}
+

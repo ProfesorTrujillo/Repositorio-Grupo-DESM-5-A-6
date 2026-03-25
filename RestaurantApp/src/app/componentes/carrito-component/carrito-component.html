@@ -1,0 +1,74 @@
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<section class="carrito">
+
+<div class="carrito">
+<div class="carrito-header">
+<h2>Carrito</h2>
+    <span class="badge">{{ carrito.items().length }} platillos</span>
+  </div>
+
+      <div class="lista-vacia" *ngIf="carrito.items().length === 0">
+        <span class="icono-vacio">📚</span>
+        <p>Aun no has agregado platillos.</p>
+        <button class="btn-confirmar" routerLink="/menu" routerLinkActive="active-button">Regresar a Menú</button>
+    </div>
+
+<div class="tabla-wrapper" *ngIf="carrito.items().length > 0">
+    <table class="tabla">
+        <thead>
+            <tr>
+                <th>Platillo</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Importe</th>
+                <th></th>
+            </tr>
+        </thead>
+<tbody>
+
+<tr *ngFor="let it of carrito.items(); trackBy: trackById">
+<td>{{ it.platillo.nombre }}</td>
+<td>{{ it.platillo.precio | currency:'MXN':'symbol' }}</td>
+<td>
+<input type="number" min="0" [value]="it.cantidad"
+(input)="actualizarCantidad(it.id, $any($event.target).value)">
+</td>
+<td>{{ (it.platillo.precio * it.cantidad) | currency:'MXN':'symbol' }}</td>
+<td><button class="btn-eliminar" (click)="carrito.eliminar(it.id)">✕</button></td>
+
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="totales-geo-grid" *ngIf="carrito.items().length > 0">
+    <div class="totales">
+        <h3>Resumen del pedido</h3>
+        <div class="total-row">
+            <span>Subtotal</span>
+            <strong>{{ carrito.subtotal() | currency:'MXN':'symbol' }}</strong>
+            </div>
+            <div class="total-row">
+            <span>IVA (16%) </span>
+            <strong>{{ carrito.iva() | currency:'MXN':'symbol' }}</strong>
+            </div>
+            <div class="total-row">
+            <span>Envío estimado</span>
+            <strong>{{ carrito.envio() | currency:'MXN':'symbol' }}</strong>
+            </div>
+            <div class="total-row">
+            <span>Total a pagar </span>
+            <strong>{{ carrito.total() | currency:'MXN':'symbol' }}</strong>
+            </div>
+            <div class="btn-group">
+                <button class="btn-vaciar" (click)="carrito.vaciar()">Vaciar carrito</button>
+                <button class="btn-confirmar" (click)="pagar()" [disabled]="pagando">
+                {{ pagando ? 'Redirigiendo…' : 'Pagar con Stripe' }}
+                </button>
+            </div>
+        </div>
+        <app-ubicacion [compacto]="true"></app-ubicacion>
+        
+</div>
+</section>

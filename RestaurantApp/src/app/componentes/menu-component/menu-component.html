@@ -1,0 +1,33 @@
+<main class="menu-pagina">
+  <div class="contenedor">
+
+    <div class="menu-encabezado">
+      <span class="menu-etiqueta">Menú del día</span>
+      <h1 class="menu-titulo">Nuestros platillos</h1>
+      <p class="menu-subtitulo">Preparados con ingredientes frescos y mucho amor</p>
+    </div>
+
+    <div class="lista-vacia" *ngIf="platillo.length === 0">
+        <span class="icono-vacio">📚</span>
+        <p>No hay platillos disponibles.</p>
+    </div>
+
+    <div class="grid" *ngIf="platillo.length > 0">
+    <article class="card" *ngFor="let p of platillo; trackBy: trackByPlatilloId" [class.card-agotado]="!p.disponibilidad">
+        <div class="card-content">
+            <h3>{{p.nombre}}</h3>
+            <p><strong>Autor:</strong> {{p.categoria}}</p>
+            <p class="descripcion">{{p.descripcion}}</p>
+            </div>
+    <footer class="card-footer">
+    <p><strong>Precio:</strong> ${{ p.precio.toFixed(2) }}</p>
+    <div class="card-acciones">
+    <button class="btn-agregar" (click)="agregarAlCarrito(p)" [disabled]="!p.disponibilidad">Agregar</button>
+
+    <a class="btn-detalles" [routerLink]="['/detalle', p.id]">Detalles</a>
+    </div>
+    </footer>
+    </article>
+</div>
+</div>
+</main>
