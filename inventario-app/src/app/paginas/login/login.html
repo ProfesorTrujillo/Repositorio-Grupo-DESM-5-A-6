@@ -1,0 +1,40 @@
+<div class="login-container">
+  <div class="login-card">
+
+    <div class="login-header">
+      <h1>Inventario App</h1>
+      <p>Inicia sesión para continuar</p>
+    </div>
+
+    <div class="login-form">
+      <div class="input-group">
+        <label>Correo electrónico</label>
+        <input
+          type="email"
+          [(ngModel)]="correo"
+          name="correo"
+          placeholder="correo@ejemplo.com"
+        />
+      </div>
+
+      <div class="input-group">
+        <label>Contraseña</label>
+        <input
+          type="password"
+          [(ngModel)]="password"
+          name="password"
+          placeholder="••••••••"
+        />
+      </div>
+
+      <button class="btn-login" (click)="iniciar()" [disabled]="cargando">
+        {{ cargando ? 'Ingresando...' : 'Ingresar' }}
+      </button>
+
+      <a routerLink="/registro" class="enlace">
+        ¿No tienes cuenta? Crear nueva cuenta
+      </a>
+    </div>
+
+  </div>
+</div>

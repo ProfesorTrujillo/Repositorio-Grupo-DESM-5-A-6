@@ -1,0 +1,48 @@
+<div class="dashboard-container">
+  <!-- SECCIÓN IZQUIERDA: FORMULARIO -->
+  <section class="form-section">
+    <h2>{{ estado === EstadoFormulario.Editando ? 'Editando producto' : 'Nuevo producto' }}</h2>
+    <form (ngSubmit)="guardarProducto()">
+      <div class="input-group">
+        <input [(ngModel)]="producto.nombre" name="nombre" placeholder="Nombre del producto" required>
+        <input [(ngModel)]="producto.descripcion" name="descripcion" placeholder="Descripción">
+        <input type="number" [(ngModel)]="producto.precio" name="precio" placeholder="Precio" required>
+        <select [(ngModel)]="producto.categoria" name="categoria">
+          <option *ngFor="let c of categorias" [value]="c">{{ c }}</option>
+        </select>
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="btn-main">
+          {{ estado === EstadoFormulario.Editando ? 'Actualizar' : 'Guardar' }}
+        </button>
+        <button type="button" (click)="cancelar()" class="btn-main">Cancelar</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- SECCIÓN DERECHA: REGISTROS -->
+  <section class="list-section">
+    <h2>Registros</h2>
+    <div class="scroll-area">
+      <ul>
+        <li *ngFor="let p of productos">
+          <div class="info">
+            <strong>{{ p.nombre }}</strong>
+            <span>${{ p.precio }} • {{ p.categoria }}</span>
+          </div>
+          <div class="item-actions">
+            <!-- CRUD original -->
+            <button (click)="editarProducto(p)" class="btn-icon">✎</button>
+            <button (click)="eliminarProducto(p.id)" class="btn-icon delete">✕</button>
+            <!-- PASO 9: WhatsApp -->
+            <button type="button" (click)="contactarPorWhatsapp(p)" class="btn-icon">💬</button>
+            <!-- PASO 10: Redes sociales -->
+            <button type="button" (click)="compartirFacebook(p)" class="btn-icon">f</button>
+            <button type="button" (click)="compartirTwitter(p)" class="btn-icon">𝕏</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+</div>

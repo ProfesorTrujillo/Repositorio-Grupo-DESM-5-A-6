@@ -1,0 +1,120 @@
+:host {
+  --bg-main: #0F0F1A;
+  --btn-base: #474747;
+  --btn-hover: #555555;
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.02em;
+  text-align: center;
+  background: linear-gradient(to bottom, #ffffff, #b0b0b0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ── Inputs ── */
+input {
+  width: 100%;
+  max-width: 320px;
+  padding: 14px 16px;
+  margin-top: 1rem;
+
+  font-size: 1rem;
+  color: var(--text-primary);
+  background-color: #1a1a2e;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+
+  outline: none;
+  transition: var(--transition-smooth);
+  box-sizing: border-box;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+input:focus {
+  border-color: rgba(255, 255, 255, 0.4);
+  background-color: #1f1f35;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05);
+}
+
+/* ── Botón ── */
+button {
+  width: 100%;
+  max-width: 320px;
+  padding: 14px 28px;
+  margin-top: 1.5rem;
+
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background-color: var(--btn-base);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+
+  cursor: pointer;
+  outline: none;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:hover {
+  background-color: var(--btn-hover);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+button:focus-visible {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2), 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── Enlace registro ── */
+.enlace {
+  margin-top: 1.2rem;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  text-align: center;
+  transition: var(--transition-smooth);
+}
+
+.enlace:hover {
+  color: var(--text-primary);
+}

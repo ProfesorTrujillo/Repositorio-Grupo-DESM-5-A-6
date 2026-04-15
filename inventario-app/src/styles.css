@@ -1,0 +1,119 @@
+:root {
+  --primary-color: #00a2ff;
+  --primary-hover: #0078d7;
+  --bg-dark: #1e1e2f;
+  --bg-input: #2a2a3d;
+  --text-main: #f0f0f0;
+  --error-color: #ff6b6b;
+  --success-color: #4caf50;
+  --transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box; /* Evita que el padding rompa el ancho */
+}
+
+body {
+  margin: 0;
+  padding: 0; /* Quitamos el padding para que pegue a los bordes */
+  background: #0f0f1a;
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text-main);
+  min-height: 100vh;
+  /* Eliminamos el centrado flex para que el contenido fluya */
+  display: block; 
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px 30px;
+  background: var(--bg-dark);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.titulo {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.contenedor input {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border: 1px solid #444;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: var(--bg-input);
+  color: var(--text-main);
+  transition: var(--transition);
+}
+
+.contenedor input::placeholder {
+  color: #888;
+}
+
+.contenedor input:focus {
+  border-color: var(--primary-color);
+  background: #33334d;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 162, 255, 0.2);
+}
+
+.contenedor button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  background: linear-gradient(135deg, var(--primary-hover), var(--primary-color));
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.contenedor button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 5px 15px rgba(0, 162, 255, 0.3);
+}
+
+.contenedor button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.contenedor button:disabled {
+  background: #444;
+  color: #888;
+  cursor: not-allowed;
+}
+
+.mensaje-error, .mensaje-exito {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.mensaje-error { color: var(--error-color); }
+.mensaje-exito { color: var(--success-color); }
+
+.enlace {
+  display: inline-block;
+  margin-top: 25px;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.enlace:hover {
+  filter: brightness(1.2);
+  text-decoration: underline;
+}
