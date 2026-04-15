@@ -1,59 +1,31 @@
-# InventarioApp
+# Portafolio de Evidencias - Evaluación Final
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.1.
+## Datos del alumno
+- Nombre: Melisa Medina Nieto
+- Grupo: DESM-5-A-6
+- Carrera: Desarrollo de Software Multiplataforma
 
-## Development server
+## Descripción del proyecto
+Aplicación Angular integrada con Firebase que implementa autenticación,
+CRUD con Firestore e integración de APIs de comunicación.
 
-To start a local development server, run:
+## Actividades integradas
+- AA 3.3 - Conociendo Firebase antes de Angular
+- AA 3.3.1 - Configuración del entorno en Firebase
+- AA 3.3.2 - Verificación y validación de Firebase
+- AA 3.3.3 - Integración de Firebase en Angular 21.1.1
+- AA 3.3.4 - Login y Registro con Firebase Authentication
+- AA 3.5 - CRUD completo con Angular y Firestore
+- AA 3.6 - Integración de APIs de Comunicación
 
-```bash
-ng serve
-```
+## Tecnologías utilizadas
+- Angular 21.1.1
+- Firebase / Firestore
+- Firebase Authentication
+- TypeScript
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Pasos para ejecutar el proyecto
+1. Clonar el repositorio: `git clone URL`
+2. Instalar dependencias: `npm install`
+3. Ejecutar en local: `ng serve`
+4. Abrir en navegador: `http://localhost:4200`
