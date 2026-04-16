@@ -1,0 +1,33 @@
+<div class="table wrapper">
+<table class="main-table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Categoria</th>
+            <th>Descripcion</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th class="text-center">Acciones</th>
+        </tr>
+    </thead>
+    
+  
+
+    <tbody>
+        <tr *ngFor="let m of muebles">
+            <td class="font-bold">{{ m.nombre_mueble }}</td>
+            <td><span class="text-muted">{{ m.nombre_categoria }}</span></td>
+            <td class="text-muted">{{ m.descripcion}}</td>
+            <td class="price">{{ m.precio }}</td>
+            <td><span [class]="m.stockActual > m.stockMinimo ? 'stock-badge success' : 'stock-badge danger'">
+                    {{ m.stockActual }}
+                </span>
+            </td>
+            <td class="actions">
+                <button class="btn-edit" [routerLink]="['/editar', m.mueble_id]"><i></i>Editar</button>
+                <button class="btn-delete" (click)="onEliminar(m.mueble_id)">Desactivar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>

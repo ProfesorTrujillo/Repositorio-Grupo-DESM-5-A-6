@@ -1,0 +1,25 @@
+<div class="notificaciones-container">
+    <div class="notif-card horizontal">
+
+        <div class="notif-icono">
+            <i class="fas fa-exclamation-triangle"></i>
+        </div>
+
+        <div class="notif-body">
+            <div class="notif-content-wrapper">
+                <h5 class="notif-titulo"> Stock bajo detectado</h5>
+                <p class="notif-mensaje"> {{ alerta.mensaje }}</p>
+                    <span class="notif-tiempo">
+                        <i class="far fa-clock"></i>{{ alerta.fecha_creacion | date: 'medium' }}
+                    </span>
+            </div>
+        </div>
+
+        <div class="notif-acciones">
+            <button class="notif-btn-revisado" (click)="marcarRevisado()">
+                <i class="fas fa-check"></i>Revisado
+            </button>
+        </div>
+        
+    </div>
+</div>

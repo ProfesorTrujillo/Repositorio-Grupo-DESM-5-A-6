@@ -1,0 +1,73 @@
+{
+  "hash": "8e1bd399",
+  "configHash": "cf958440",
+  "lockfileHash": "a3f37f3c",
+  "browserHash": "16b8ae0a",
+  "optimized": {
+    "@angular/core": {
+      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "bf0d6707",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "6f37291f",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "40b515fb",
+      "needsInterop": false
+    },
+    "@angular/common": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "bf841fa4",
+      "needsInterop": false
+    },
+    "leaflet": {
+      "src": "../../../../../../node_modules/leaflet/dist/leaflet-src.js",
+      "file": "leaflet.js",
+      "fileHash": "28bcb959",
+      "needsInterop": true
+    },
+    "rxjs": {
+      "src": "../../../../../../node_modules/rxjs/dist/esm5/index.js",
+      "file": "rxjs.js",
+      "fileHash": "c4f1e758",
+      "needsInterop": false
+    },
+    "@angular/common/http": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/http.mjs",
+      "file": "@angular_common_http.js",
+      "fileHash": "ad62f436",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-6GFDRQGQ": {
+      "file": "chunk-6GFDRQGQ.js"
+    },
+    "chunk-OJWA7ZHG": {
+      "file": "chunk-OJWA7ZHG.js"
+    },
+    "chunk-SZR3VHJ2": {
+      "file": "chunk-SZR3VHJ2.js"
+    },
+    "chunk-UTLNHL76": {
+      "file": "chunk-UTLNHL76.js"
+    },
+    "chunk-4ZCMOOEG": {
+      "file": "chunk-4ZCMOOEG.js"
+    },
+    "chunk-RSS3ODKE": {
+      "file": "chunk-RSS3ODKE.js"
+    },
+    "chunk-H2SRQSE4": {
+      "file": "chunk-H2SRQSE4.js"
+    }
+  }
+}
