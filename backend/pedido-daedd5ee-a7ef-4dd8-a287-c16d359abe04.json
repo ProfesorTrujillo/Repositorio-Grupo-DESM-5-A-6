@@ -1,0 +1,33 @@
+{
+  "id": "daedd5ee-a7ef-4dd8-a287-c16d359abe04",
+  "items": [
+    {
+      "id": 2,
+      "platillo": {
+        "id": 2,
+        "nombre": "Enchiladas",
+        "descripcion": "Enchiladas rojas",
+        "precio": 95,
+        "disponible": true
+      },
+      "cantidad": 2
+    },
+    {
+      "id": 3,
+      "platillo": {
+        "id": 3,
+        "nombre": "Pozole",
+        "descripcion": "Pozole rojo",
+        "precio": 120,
+        "disponible": true
+      },
+      "cantidad": 1
+    }
+  ],
+  "subtotal": 310,
+  "iva": 49.6,
+  "envio": 101,
+  "total": 460.6,
+  "fecha": "2026-03-22T06:16:26.189Z",
+  "estado": "Pagado (Stripe Test)"
+}

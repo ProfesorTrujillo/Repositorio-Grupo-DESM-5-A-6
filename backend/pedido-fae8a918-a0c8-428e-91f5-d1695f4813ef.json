@@ -1,0 +1,44 @@
+{
+  "id": "fae8a918-a0c8-428e-91f5-d1695f4813ef",
+  "items": [
+    {
+      "id": 2,
+      "platillo": {
+        "id": 2,
+        "nombre": "Enchiladas",
+        "descripcion": "Enchiladas rojas",
+        "precio": 95,
+        "disponible": true
+      },
+      "cantidad": 2
+    },
+    {
+      "id": 3,
+      "platillo": {
+        "id": 3,
+        "nombre": "Pozole",
+        "descripcion": "Pozole rojo",
+        "precio": 120,
+        "disponible": true
+      },
+      "cantidad": 2
+    },
+    {
+      "id": 5,
+      "platillo": {
+        "id": 5,
+        "nombre": "Pizza",
+        "descripcion": "Pizza de pepperoni",
+        "precio": 150,
+        "disponible": true
+      },
+      "cantidad": 2
+    }
+  ],
+  "subtotal": 730,
+  "iva": 116.8,
+  "envio": 100,
+  "total": 946.8,
+  "fecha": "2026-03-22T06:24:35.581Z",
+  "estado": "Pagado (Stripe Test)"
+}

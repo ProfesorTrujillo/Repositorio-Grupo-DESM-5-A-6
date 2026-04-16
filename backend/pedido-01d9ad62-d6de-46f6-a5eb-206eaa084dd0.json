@@ -1,0 +1,22 @@
+{
+  "id": "01d9ad62-d6de-46f6-a5eb-206eaa084dd0",
+  "items": [
+    {
+      "id": 5,
+      "platillo": {
+        "id": 5,
+        "nombre": "Pizza",
+        "descripcion": "Pizza de pepperoni",
+        "precio": 150,
+        "disponible": true
+      },
+      "cantidad": 4
+    }
+  ],
+  "subtotal": 600,
+  "iva": 96,
+  "envio": 120,
+  "total": 816,
+  "fecha": "2026-03-24T16:31:53.103Z",
+  "estado": "Pagado (Stripe Test)"
+}

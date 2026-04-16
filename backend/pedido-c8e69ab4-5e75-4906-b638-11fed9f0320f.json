@@ -1,0 +1,55 @@
+{
+  "id": "c8e69ab4-5e75-4906-b638-11fed9f0320f",
+  "items": [
+    {
+      "id": 2,
+      "platillo": {
+        "id": 2,
+        "nombre": "Enchiladas",
+        "descripcion": "Enchiladas rojas",
+        "precio": 95,
+        "disponible": true
+      },
+      "cantidad": 4
+    },
+    {
+      "id": 3,
+      "platillo": {
+        "id": 3,
+        "nombre": "Pozole",
+        "descripcion": "Pozole rojo",
+        "precio": 120,
+        "disponible": true
+      },
+      "cantidad": 1
+    },
+    {
+      "id": 1,
+      "platillo": {
+        "id": 1,
+        "nombre": "Tacos",
+        "descripcion": "Tacos al pastor y bistec",
+        "precio": 80,
+        "disponible": true
+      },
+      "cantidad": 1
+    },
+    {
+      "id": 7,
+      "platillo": {
+        "id": 7,
+        "nombre": "Sushi",
+        "descripcion": "Rollos de sushi variados",
+        "precio": 180,
+        "disponible": true
+      },
+      "cantidad": 1
+    }
+  ],
+  "subtotal": 760,
+  "iva": 121.60000000000001,
+  "envio": 101,
+  "total": 982.6,
+  "fecha": "2026-03-22T06:15:18.674Z",
+  "estado": "Pagado (Stripe Test)"
+}
