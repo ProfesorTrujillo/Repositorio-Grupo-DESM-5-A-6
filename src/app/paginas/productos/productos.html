@@ -1,0 +1,74 @@
+<h2>Gestión de Productos</h2>
+
+<form (ngSubmit)="guardarProducto()">
+
+  <input
+    [(ngModel)]="producto.nombre"
+    name="nombre"
+    placeholder="Nombre del producto"
+    required>
+
+  <input
+    [(ngModel)]="producto.descripcion"
+    name="descripcion"
+    placeholder="Descripción">
+
+  <input
+    type="number"
+    [(ngModel)]="producto.precio"
+    name="precio"
+    placeholder="Precio"
+    required>
+
+  <label for="categoria">Categoría</label>
+
+  <select
+    id="categoria"
+    [(ngModel)]="producto.categoria"
+    name="categoria">
+
+    <option *ngFor="let c of categorias" [value]="c">
+      {{ c }}
+    </option>
+
+  </select>
+
+  <button type="submit">
+    {{ editando ? 'Actualizar' : 'Guardar' }}
+  </button>
+
+  <button type="button" (click)="cancelar()">
+    Cancelar
+  </button>
+
+</form>
+
+<hr>
+
+<ul>
+
+  <li *ngFor="let p of productos">
+
+    <strong>{{ p.nombre }}</strong>
+    - ${{ p.precio }}
+    ({{ p.categoria }})
+
+    <button (click)="editarProducto(p)">Editar</button>
+
+    <button (click)="eliminarProducto(p.id)">Eliminar</button>
+
+    <button type="button" (click)="contactarPorWhatsapp(p)">
+      WhatsApp
+    </button>
+
+    <button type="button" (click)="compartirFacebook(p)">
+      Facebook
+    </button>
+
+    <button type="button" (click)="compartirTwitter(p)">
+      X
+    </button>
+
+  </li>
+
+</ul>
