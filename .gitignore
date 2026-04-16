@@ -1,0 +1,23 @@
+# Entorno
+.env
+.env.*
+
+# Dependencias
+node_modules/
+
+# Angular build
+dist/
+.angular/
+
+# Firebase
+.firebase/
+firebase-debug.log
+firestore-debug.log
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
