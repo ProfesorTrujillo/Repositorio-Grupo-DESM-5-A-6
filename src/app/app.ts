@@ -1,12 +1,14 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router'; // <-- ¡Esta es la magia!
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterOutlet], // <-- Y aquí lo declaramos
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
-export class App {
-  protected readonly title = signal('restaurant-app');
+export class AppComponent {
+  // Ya no necesitamos el código viejo de FirebaseService aquí, 
+  // porque el Router se encargará de mostrar el Login o el Registro.
 }

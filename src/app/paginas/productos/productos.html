@@ -1,0 +1,26 @@
+<h2>Gestión de Productos</h2>
+
+<form (ngSubmit)="guardarProducto()">
+  <input [(ngModel)]="producto.nombre" name="nombre" placeholder="Nombre del producto" required>
+  <input [(ngModel)]="producto.descripcion" name="descripcion" placeholder="Descripción">
+  <input type="number" [(ngModel)]="producto.precio" name="precio" placeholder="Precio" required>
+
+  <select [(ngModel)]="producto.categoria" name="categoria">
+    <option *ngFor="let c of categorias" [value]="c">{{ c }}</option>
+  </select>
+
+<button type="submit">{{ estado === 'EDITANDO' ? 'Actualizar' : 'Guardar' }}</button>  <button type="button" (click)="cancelar()">Cancelar</button>
+</form>
+
+<hr>
+
+<ul>
+  <li *ngFor="let p of productos">
+    <strong>{{ p.nombre }}</strong> - ${{ p.precio }} ({{ p.categoria }})
+    <button (click)="editarProducto(p)">Editar</button>
+    <button (click)="eliminarProducto(p.id)">Eliminar</button>
+    <button type="button" style="background-color: #25D366;" (click)="contactarPorWhatsapp(p)">WhatsApp</button>
+    <button type="button" style="background-color: #1877F2;" (click)="compartirFacebook(p)">Facebook</button>
+    <button type="button" style="background-color: #000000;" (click)="compartirTwitter(p)">X</button>
+  </li>
+</ul>

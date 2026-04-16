@@ -1,0 +1,115 @@
+/* Contenedor principal */
+:host {
+  display: block;
+  max-width: 800px;
+  margin: 40px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Diseño del formulario estilo tarjeta */
+form {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+/* Los inputs ocupan todo el ancho en su celda, la descripción ocupa ambas columnas */
+input, select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+input[name="descripcion"] {
+  grid-column: span 2;
+}
+
+input:focus, select:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+/* Botones del formulario */
+button[type="submit"] {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button[type="submit"]:hover { background-color: #219653; }
+
+button[type="button"] {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button[type="button"]:hover { background-color: #c0392b; }
+
+/* Lista de productos */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  border-left: 5px solid #3498db;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+li strong {
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+/* Botones de la lista */
+li button {
+  padding: 8px 12px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+li button:first-of-type {
+  background-color: #f39c12;
+  color: white;
+}
+li button:first-of-type:hover { background-color: #d68910; }
+
+li button:last-of-type {
+  background-color: #e74c3c;
+  color: white;
+}
+li button:last-of-type:hover { background-color: #c0392b; }
