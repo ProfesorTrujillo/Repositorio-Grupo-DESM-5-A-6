@@ -1,0 +1,68 @@
+/* CONTENEDOR PRINCIPAL */
+.contenedor {
+width: 380px;
+margin: 60px auto;
+padding: 30px;
+border-radius: 12px;
+background: #fff;
+box-shadow: 0 0 12px rgba(0,0,0,0.15);
+display: flex;
+flex-direction: column;
+gap: 16px;
+}
+/* TITULO */
+.titulo {
+text-align: center;
+margin-bottom: 10px;
+font-size: 22px;
+font-weight: bold;
+}
+/* INPUT */
+input {
+padding: 12px;
+border: 1px solid #bbb;
+border-radius: 6px;
+width: 100%;
+font-size: 15px;
+}
+/* BOTON */
+button {
+padding: 12px;
+background-color: #2d7dd2;
+color: white;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+font-weight: bold;
+font-size: 16px;
+transition: 0.2s;
+}button:disabled {
+background-color: #b5d0ee;
+cursor: not-allowed;
+}
+button:hover:not(:disabled) {
+background-color: #185a9d;
+}
+/* ENLACES */
+.enlace {
+text-align: center;
+font-size: 14px;
+display: block;
+margin-top: 8px;
+color: #2d7dd2;
+text-decoration: none;
+}
+.enlace:hover {
+text-decoration: underline;
+}
+/* MENSAJES */
+.mensaje-error {
+color: red;
+font-size: 13px;
+text-align: center;
+}
+.mensaje-exito {
+color: green;
+font-size: 13px;
+text-align: center;
+}
