@@ -1,0 +1,19 @@
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mensaje-error {
+  color: #e74c3c;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.mensaje-exito {
+  color: #2ecc71;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}

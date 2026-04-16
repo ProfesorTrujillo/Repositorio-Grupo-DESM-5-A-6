@@ -1,0 +1,31 @@
+<main class="menu">
+<h2>Menú</h2>
+<p *ngIf="platillos.length === 0">Por el momento no hay platillos disponibles.</p>
+
+<div class="grid">
+
+<article class="card" *ngFor="let p of platillos; trackBy: trackById">
+
+<header class="card-header">
+
+<h3 class="card-title">{{ p.nombre }}</h3>
+
+<span class="badge"
+      [ngClass]="p.disponible ? 'disponible' : 'agotado'">
+  {{ p.disponible ? 'Disponible' : 'Agotado' }}
+</span>
+
+</header>
+<p class="card-desc">{{ p.descripcion }}</p>
+<footer class="card-footer">
+
+<span class="precio">{{ p.precio | currency:'MXN':'symbol':'1.0-0' }}</span>
+<button (click)="agregar(p)" [disabled]="!p.disponible">Agregar</button>
+
+  <!-- Navegación directa al carrito -->
+  <a routerLink="/carrito" class="btn-carrito">Ver carrito</a>
+
+</footer>
+</article>
+</div>
+</main>

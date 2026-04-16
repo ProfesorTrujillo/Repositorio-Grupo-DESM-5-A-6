@@ -1,0 +1,119 @@
+:host {
+  display: block;
+  padding: 2rem;
+  background: #f0f4f8;
+  min-height: 100vh;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ✅ .form-producto reemplaza form */
+.form-producto {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  padding: 2rem;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0 auto 2rem;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #1a202c;
+  box-sizing: border-box;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #4a90d9;
+}
+
+/* ✅ .btn-guardar reemplaza button[type="submit"] */
+.btn-guardar {
+  padding: 10px;
+  background: #4a90d9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-guardar:hover {
+  background: #3a7bc8;
+}
+
+/* ✅ .btn-cancelar reemplaza button[type="button"] */
+.btn-cancelar {
+  padding: 10px;
+  background: transparent;
+  color: #4a5568;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-cancelar:hover {
+  background: #f7fafc;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 1.5rem 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+li strong {
+  flex: 1;
+}
+
+li button {
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  border: 1px solid #cbd5e0;
+  background: transparent;
+  color: #4a5568;
+}
+
+li button:first-of-type {
+  border-color: #4a90d9;
+  color: #4a90d9;
+}
+
+li button:last-of-type {
+  border-color: #e53e3e;
+  color: #e53e3e;
+}

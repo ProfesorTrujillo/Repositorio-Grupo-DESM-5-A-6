@@ -1,0 +1,35 @@
+<h2>Gestión de Productos</h2>
+
+<div class="form-producto">
+  <input [(ngModel)]="producto.nombre" name="nombre" placeholder="Nombre del producto" />
+  <input [(ngModel)]="producto.descripcion" name="descripcion" placeholder="Descripción" />
+  <input type="number" [(ngModel)]="producto.precio" name="precio" placeholder="Precio" />
+
+  <select [(ngModel)]="producto.categoria" name="categoria">
+    @for (c of categorias; track c) {
+      <option [value]="c">{{ c }}</option>
+    }
+  </select>
+
+  <button class="btn-guardar" (click)="guardarProducto()">
+    {{ estado === EstadoFormulario.Editando ? 'Actualizar' : 'Guardar' }}
+  </button>
+  <button class="btn-cancelar" (click)="cancelar()">Cancelar</button>
+</div>
+
+<hr />
+
+<ul>
+  @for (p of productos; track p.id) {
+    <li>
+      <strong>{{ p.nombre }}</strong> - ${{ p.precio }} ({{ p.categoria }})
+      <button (click)="editarProducto(p)">Editar</button>
+      <button (click)="eliminarProducto(p.id)">Eliminar</button>
+      <button (click)="contactarPorWhatsapp(p)">WhatsApp</button>
+      <button (click)="compartirFacebook(p)">Facebook</button>
+      <button (click)="compartirTwitter(p)">X</button>
+    </li>
+  } @empty {
+    <li>No hay productos registrados.</li>
+  }
+</ul>
