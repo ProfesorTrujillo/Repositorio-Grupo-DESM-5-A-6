@@ -40,17 +40,6 @@ La aplicación permite a los usuarios registrarse e iniciar sesión utilizando F
 
 ---
 
-
-## ⚙️ Funcionalidades Principales
-
-- 🔐 Registro e inicio de sesión con Firebase Authentication  
-- 📦 Gestión de productos (Crear, Leer, Actualizar y Eliminar) con Firestore  
-- 🔄 Navegación entre páginas mediante rutas en Angular  
-- 📡 Integración con APIs externas para comunicación  
-- 🧩 Arquitectura modular basada en servicios  
-
----
-
 ## 🚀 Pasos para Ejecutar el Proyecto
 
 1. Clonar el repositorio:
