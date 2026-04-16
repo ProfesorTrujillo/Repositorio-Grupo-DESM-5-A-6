@@ -1,0 +1,22 @@
+/* src/app/paginas/login/login.component.css */
+.mensaje-error {
+  color: #e74c3c;
+  background-color: #fdecea;
+  border: 1px solid #e74c3c;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.mensaje-exito {
+  color: #27ae60;
+  background-color: #eafaf1;
+  border: 1px solid #27ae60;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}

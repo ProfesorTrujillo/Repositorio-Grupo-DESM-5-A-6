@@ -1,0 +1,34 @@
+<!-- src/app/paginas/login/login.component.html -->
+<div class="contenedor">
+  <h2 class="titulo">Iniciar Sesión</h2>
+  
+  <input 
+    type="email" 
+    [(ngModel)]="correo" 
+    placeholder="Correo electrónico"
+    (keyup.enter)="iniciar()">
+  
+  <input 
+    type="password" 
+    [(ngModel)]="password" 
+    placeholder="Contraseña"
+    (keyup.enter)="iniciar()">
+
+  <button (click)="iniciar()" [disabled]="cargando">
+    {{ cargando ? 'Ingresando...' : 'Ingresar' }}
+  </button>
+
+  <!-- Mensaje de error - EN ROJO -->
+  <div *ngIf="mensajeError" class="mensaje-error">
+    {{ mensajeError }}
+  </div>
+
+  <!-- Mensaje de éxito - EN VERDE -->
+  <div *ngIf="mensajeExito" class="mensaje-exito">
+    {{ mensajeExito }}
+  </div>
+
+  <a routerLink="/registro" class="enlace">
+    ¿No tienes cuenta? Crear nueva cuenta
+  </a>
+</div>

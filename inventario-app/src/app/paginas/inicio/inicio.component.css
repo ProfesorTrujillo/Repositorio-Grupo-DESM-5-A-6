@@ -1,0 +1,48 @@
+/* src/app/paginas/inicio/inicio.component.css */
+.inicio-container {
+  max-width: 600px;
+  margin: 100px auto;
+  text-align: center;
+  padding: 2rem;
+}
+
+h2 {
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+.botones {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn-productos {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s;
+}
+
+.btn-productos:hover {
+  transform: translateY(-2px);
+}
+
+.btn-cerrar {
+  background: #e74c3c;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s;
+}
+
+.btn-cerrar:hover {
+  transform: translateY(-2px);
+}

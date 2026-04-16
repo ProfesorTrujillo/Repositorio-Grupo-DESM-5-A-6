@@ -1,0 +1,62 @@
+<!-- src/app/paginas/productos/productos.component.html -->
+<div class="productos-container">
+  <h2>Gestión de Productos</h2>
+
+  <!-- NOTIFICACIÓN LOCAL -->
+  <div *ngIf="mensajeNotificacion" class="notificacion" [ngClass]="tipoNotificacion">
+    {{ mensajeNotificacion }}
+  </div>
+
+  <form (ngSubmit)="guardarProducto()" class="producto-form">
+    <div class="form-group">
+      <label>Nombre del producto</label>
+      <input [(ngModel)]="producto.nombre" name="nombre" placeholder="Nombre del producto" required>
+    </div>
+
+    <div class="form-group">
+      <label>Descripción</label>
+      <input [(ngModel)]="producto.descripcion" name="descripcion" placeholder="Descripción">
+    </div>
+
+    <div class="form-group">
+      <label>Precio</label>
+      <input type="number" [(ngModel)]="producto.precio" name="precio" placeholder="Precio" required>
+    </div>
+
+    <div class="form-group">
+      <label>Categoría</label>
+      <select [(ngModel)]="producto.categoria" name="categoria">
+        <option *ngFor="let c of categorias" [value]="c">{{ c }}</option>
+      </select>
+    </div>
+
+    <div class="form-buttons">
+      <button type="submit" class="btn-guardar">
+        {{ estado === 'EDITANDO' ? 'Actualizar' : 'Guardar' }}
+      </button>
+      <button type="button" class="btn-cancelar" (click)="cancelar()">Cancelar</button>
+    </div>
+  </form>
+
+  <div class="productos-lista">
+    <h3>Lista de Productos</h3>
+    <div *ngIf="productos.length === 0" class="sin-productos">
+      No hay productos registrados
+    </div>
+    <div *ngFor="let p of productos" class="producto-item">
+      <div class="producto-info">
+        <strong>{{ p.nombre }}</strong>
+        <span class="precio">${{ p.precio }}</span>
+        <span class="categoria">{{ p.categoria }}</span>
+        <p class="descripcion" *ngIf="p.descripcion">{{ p.descripcion }}</p>
+      </div>
+      <div class="producto-acciones">
+        <button class="btn-editar" (click)="editarProducto(p)">Editar</button>
+        <button class="btn-eliminar" (click)="eliminarProducto(p.id)">Eliminar</button>
+        <button class="btn-whatsapp" (click)="contactarPorWhatsapp(p)">📱 WhatsApp</button>
+        <button class="btn-facebook" (click)="compartirFacebook(p)">📘 Facebook</button>
+        <button class="btn-twitter" (click)="compartirTwitter(p)">🐦 X</button>
+      </div>
+    </div>
+  </div>
+</div>
