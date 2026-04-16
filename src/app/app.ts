@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './components/header/header';
@@ -13,3 +14,16 @@ import { MenuComponent } from './components/menu/menu';
 export class App {
   protected readonly title = signal('restaurant-app');
 }
+=======
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+
+@Component({
+ selector: 'app-root',
+ standalone: true,
+ imports: [RouterOutlet],
+ template: `<router-outlet></router-outlet>`
+})
+export class AppComponent {
+}
+>>>>>>> Stashed changes

@@ -1,0 +1,31 @@
+<h2>Gestión de Productos</h2>
+
+<!-- Botón para iniciar la creación de un producto -->
+<button *ngIf="estado === 'Inactivo'" (click)="resetFormulario()">+ Crear Nuevo Producto</button>
+
+<!-- El formulario solo se muestra si estamos Creando o Editando -->
+<form *ngIf="estado !== 'Inactivo'" (ngSubmit)="guardarProducto()">
+<h3>{{ estado === 'Editando' ? 'Editar Producto' : 'Nuevo Producto' }}</h3>
+<input [(ngModel)]="producto.nombre" name="nombre" placeholder="Nombre del producto" 
+required>
+<input [(ngModel)]="producto.descripcion" name="descripcion" placeholder="Descripción">
+<input type="number" [(ngModel)]="producto.precio" name="precio" placeholder="Precio" 
+required>
+<select [(ngModel)]="producto.categoria" name="categoria">
+<option *ngFor="let c of categorias" [value]="c">{{ c }}</option>
+</select>
+<button type="submit">{{ estado === 'Editando' ? 'Actualizar' : 'Guardar' }}</button>
+<button type="button" (click)="cancelar()">Cancelar</button>
+</form>
+<hr>
+<ul>
+<li *ngFor="let p of productos">
+<strong>{{ p.nombre }}</strong> - ${{ p.precio }} ({{ p.categoria }})
+<button (click)="editarProducto(p)">Editar</button>
+<button (click)="eliminarProducto(p.id)">Eliminar</button>
+<!-- Botones de integración de APIs -->
+<button (click)="contactarPorWhatsapp(p)">WhatsApp</button>
+<button (click)="compartirFacebook(p)">Facebook</button>
+<button (click)="compartirTwitter(p)">X</button>
+</li>
+</ul>

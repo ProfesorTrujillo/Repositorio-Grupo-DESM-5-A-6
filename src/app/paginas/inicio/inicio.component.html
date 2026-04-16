@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Página de Inicio</h1>
+  <p>¡Bienvenido al inventario!</p>
+
+  <div class="botones">
+    <button (click)="agregar()">Probar Base de Datos</button>
+    <button (click)="irAProductos()">Ir a Gestión de Productos</button>
+    <button (click)="cerrar()" class="logout">Cerrar Sesión</button>
+  </div>
+
+  <div *ngIf="mensajeExito" class="exito">
+    {{ mensajeExito }}
+  </div>
+
+  <h2>Datos en Firebase:</h2>
+  <ul>
+    <li *ngFor="let item of lista">
+      {{ item.mensaje }} - {{ item.fecha | date:'short' }}
+    </li>
+  </ul>
+</div>
