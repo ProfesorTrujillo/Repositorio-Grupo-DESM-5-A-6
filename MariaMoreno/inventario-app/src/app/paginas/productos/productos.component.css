@@ -1,0 +1,89 @@
+/* ----- TÍTULO ----- */
+h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* ----- FORMULARIO ----- */
+form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
+}
+
+input, select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  background: #4a8eff;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:hover {
+  background: #2f6be0;
+}
+
+/* ----- LISTA ----- */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Cada producto como tarjeta */
+li {
+  padding: 15px;
+  border-radius: 12px;
+  background: white;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #eee;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+}
+
+/* Info del producto */
+li .info {
+  display: flex;
+  flex-direction: column;
+}
+
+li strong {
+  font-size: 18px;
+  color: #333;
+}
+
+/* ----- BOTONES DE ACCIONES ----- */
+li .acciones {
+  display: flex;
+  gap: 8px;
+}
+
+li button {
+  border-radius: 6px;
+  padding: 6px 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Estilos específicos */
+.editar { background: #007bff; }
+.eliminar { background: #d93636; }
+.wsp { background: #25D366; }
+.fb { background: #1877f2; }
+.x { background: #000; }

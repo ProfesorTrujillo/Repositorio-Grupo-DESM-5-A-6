@@ -1,0 +1,45 @@
+<h2>Gestión de Productos</h2>
+
+<button (click)="irInicio()" class="btn-volver">
+  ← Volver a Inicio
+</button>
+
+<form (ngSubmit)="guardarProducto()">
+
+  <input [(ngModel)]="producto.nombre" name="nombre" placeholder="Nombre" required>
+
+  <input [(ngModel)]="producto.descripcion" name="descripcion" placeholder="Descripción">
+
+  <input type="number" [(ngModel)]="producto.precio" name="precio" placeholder="Precio" required>
+
+  <select [(ngModel)]="producto.categoria" name="categoria">
+    <option *ngFor="let c of categorias" [value]="c">{{ c }}</option>
+  </select>
+
+  <button type="submit">
+    {{ estado === 'EDITANDO' ? 'Actualizar' : 'Guardar' }}
+  </button>
+
+  <button type="button" (click)="cancelar()">Cancelar</button>
+
+</form>
+
+<hr>
+
+<ul class="lista-productos">
+  <li *ngFor="let p of productos" class="producto-item">
+    <div class="info">
+      <h3>{{ p.nombre }}</h3>
+      <p><strong>Precio:</strong> ${{ p.precio }}</p>
+      <p><strong>Categoría:</strong> {{ p.categoria }}</p>
+    </div>
+
+    <div class="acciones">
+      <button class="btn editar" (click)="editarProducto(p)">Editar</button>
+      <button class="btn eliminar" (click)="eliminarProducto(p.id)">Eliminar</button>
+
+      <button class="btn wsp" (click)="contactarWhatsapp(p)">WhatsApp</button>
+      <button class="btn fb" (click)="compartirFacebook(p)">Facebook</button>
+    </div>
+  </li>
+</ul>
