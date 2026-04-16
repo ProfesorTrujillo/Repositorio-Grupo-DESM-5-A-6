@@ -1,59 +1,37 @@
-# PracticaAngular24
+# Portafolio de Evidencias - Evaluación Final
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.1.
+## Datos de la Alumna
 
-## Development server
+- **Nombre:** Yeraldin Alexandra Corral Rodriguez
+- **Grupo:** 5-A-
+- **Carrera:** DEMS -> Desarrollo de Software Multiplataforma
 
-To start a local development server, run:
+## Descripción del Proyecto
 
-```bash
-ng serve
-```
+Aplicaciones web desarrolladas en Angular que integra Firebase para autenticación y base de datos en tiempo real esto se usó en en la actividad del inventario, Stripe para procesamiento de pagos que se integro en el de Restaurante.App, utilizando un backend con Node.js y Express para ambos proyectos.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Actividades Integradas
 
-## Code scaffolding
+- AA 3.3 Conociendo Firebase antes de Angular
+- AA 3.3.1 Configuración del entorno en Firebase
+- AA 3.3.2 Verificación y validación de Firebase
+- AA 3.3.3 Integración de Firebase en Angular 21.1.1
+- AA 3.3.4 Login y Registro con Firebase Authentication
+- AA 3.5 CRUD completo con Angular y Firestore
+- AA 3.6 Integración de APIs de Comunicación
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Tecnologías Utilizadas
 
-```bash
-ng generate component component-name
-```
+- Angular 21.1.1
+- Firebase
+- Stripe
+- Node.js y Express
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Pasos para Ejecutar
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. Clonar el repositorio y cambiar a la rama `AlexandraCorral`
+2. Ejecutar `npm install` en la raíz del proyecto
+3. Ejecutar `ng serve` para iniciar el frontend
+4. Entrar a la carpeta `backend`, ejecutar `npm install` y luego `node index.js`
+5. Crear un archivo `.env` en backend con las credenciales necesarias
+6. Abrir `http://localhost:4200` en el navegador
