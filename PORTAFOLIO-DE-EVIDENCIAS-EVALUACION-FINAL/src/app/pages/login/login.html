@@ -1,0 +1,20 @@
+<div class="contenedor">
+  <h2 class="titulo">Iniciar Sesión</h2>
+
+  <input type="email" [(ngModel)]="correo" placeholder="Correo electrónico">
+  <input type="password" [(ngModel)]="password" placeholder="Contraseña">
+
+  <button
+    (click)="iniciar()"
+    [disabled]="correo.length < 5 || password.length < 4 || cargando">
+
+    {{ cargando ? 'Ingresando...' : 'Ingresar' }}
+  </button>
+
+  <p class="mensaje-error">{{ mensajeError }}</p>
+  <p class="mensaje-exito">{{ mensajeExito }}</p>
+
+  <a routerLink="/registro" class="enlace">
+    ¿No tienes cuenta? Crear nueva cuenta
+  </a>
+</div>

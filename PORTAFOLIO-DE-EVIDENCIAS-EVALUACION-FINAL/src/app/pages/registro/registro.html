@@ -1,0 +1,20 @@
+<div class="contenedor">
+  <h2 class="titulo">Registro de Usuario</h2>
+
+  <input type="email" [(ngModel)]="correo" placeholder="Correo electrónico">
+  <input type="password" [(ngModel)]="password" placeholder="Contraseña">
+
+  <button
+    (click)="registrar()"
+    [disabled]="correo.length < 5 || password.length < 4 || cargando">
+
+    {{ cargando ? 'Creando...' : 'Crear cuenta' }}
+  </button>
+
+  <p class="mensaje-error">{{ mensajeError }}</p>
+  <p class="mensaje-exito">{{ mensajeExito }}</p>
+
+  <a routerLink="/login" class="enlace">
+    ¿Ya tienes cuenta? Inicia sesión
+  </a>
+</div>
