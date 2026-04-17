@@ -1,0 +1,15 @@
+<div class="container mt-5 text-center">
+  <div class="card shadow-lg p-5 border-success">
+    <h1 class="display-4 text-success">¡Gracias por tu compra!</h1>
+    <p class="lead">Tu pedido en <strong>Cenaduría Loma Bonita</strong> ha sido procesado con éxito.</p>
+    
+    <div class="bg-light p-4 my-4 rounded">
+      <h5 class="text-muted">Resumen de la Transacción</h5>
+      <p class="h4">Folio: <span class="text-primary">{{ folio }}</span></p>
+      <p class="h4">Total Pagado: <span>{{ totalPagado | currency:'MXN' }}</span></p>
+      <p class="badge bg-info text-dark">Estado: Pagado (Stripe Test)</p>
+    </div>
+
+    <button routerLink="/" class="btn btn-outline-primary btn-lg">Realizar otro pedido</button>
+  </div>
+</div>

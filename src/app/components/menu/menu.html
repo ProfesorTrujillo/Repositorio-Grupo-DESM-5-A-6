@@ -1,0 +1,22 @@
+<section class="menu">
+  <div *ngIf="mensajeExito()" class="alert-success-toast">
+    {{ mensajeExito() }}
+  </div>
+  <h2>Menú del Día</h2>
+<p *ngIf="platillos.length === 0">No hay platillos disponibles en este momento.</p>
+  <section id="tarjetas" class="cards">
+    <article class="card" *ngFor="let platillo of platillos">
+      <div class="card-header">
+        <h4>{{ platillo.nombre }}</h4>
+        <span class="tag">{{ platillo.disponible ? 'Disponible' : 'No disponible' }}</span>
+      </div>
+      <p>
+        {{ platillo.descripcion }}
+      </p>
+      <div class="card-footer">
+        <span class="precio"><strong>{{ platillo.precio | currency:'MXN' }}</strong></span>
+        <button class="btn btn-small" (click)="agregar(platillo)" [disabled]="!platillo.disponible">Agregar</button>
+      </div>
+    </article>
+  </section>
+</section>
